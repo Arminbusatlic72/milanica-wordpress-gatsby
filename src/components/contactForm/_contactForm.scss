@@ -1,0 +1,39 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+.contact-form {
+    display: inline-block;
+    padding: 2rem 0;
+    width: 100%;
+    &__label {
+        font-size: 1.4rem;
+        color:$blue;
+        margin-bottom: 4rem;
+        display: inline-block;
+        width: 100%;
+        @include mediaLg {
+            width: 50%;
+        }
+    }
+    &__input {
+        border: 1px solid black;
+        border-top:none;
+        border-left: none;
+        border-right: none;
+        background-color: transparent;
+        margin: 1rem;
+    
+    }
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color:$blue;
+    opacity: 40%;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color:$blue;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color:$blue;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color:$blue;
+  }

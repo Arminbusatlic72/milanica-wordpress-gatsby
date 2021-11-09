@@ -1,0 +1,56 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+.whatDoIDo-section {
+   padding-top: 0;
+    @include mediaLg {
+        padding-top: 15rem;
+    }
+    padding-bottom: 14rem;
+    background-color: $green;
+    position: relative;
+    &__heading {
+        position: relative;
+        font-size: 3.2rem;
+        line-height: 1.4;
+        font-weight: bold;
+        color: $white;
+       
+        
+    }
+    &__blur-background {
+        background: $green-background;
+        filter: $blur;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 50%;
+    }
+    &__heading-wrapper {
+        display: flex;
+        align-items: center;
+        @include mediaLg {
+            justify-content: center;
+            border-right: 1px solid $blue;
+        }
+        height: 100%;    
+        
+    }
+    &__subheading {
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: $blue;
+    }
+    &__small {
+        font-size: 1.6rem;
+        color:  $blue;
+    }
+    &__list {
+        margin-left: 2rem;
+        list-style-position: outside;
+    }
+    &__list-item {
+        font-size: 1.4rem;
+        color:$blue;
+    }
+}

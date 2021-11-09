@@ -1,0 +1,14 @@
+@import "../../scss/variables.scss";
+.about-page-section {
+    text-align: center;
+    &__heading {
+        font-size: 3.6rem;
+        font-weight: bold;
+        color: $blue;
+    }
+    &__position {
+        color:$green;
+        font-weight: normal;
+        font-size: 1.8rem;
+    }
+}

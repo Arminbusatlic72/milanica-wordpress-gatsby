@@ -3,15 +3,15 @@
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
-  --maxWidth-sm: 24rem;
-  --maxWidth-md: 28rem;
-  --maxWidth-lg: 32rem;
-  --maxWidth-xl: 36rem;
-  --maxWidth-2xl: 42rem;
+  --maxWidth-sm: 54rem;
+  --maxWidth-md: 72rem;
+  --maxWidth-lg: 96rem;
+  --maxWidth-xl: 114rem;
+  --maxWidth-2xl: 132rem;
   --maxWidth-3xl: 48rem;
-  --maxWidth-4xl: 56rem;
+  --maxWidth-4xl: 96rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -27,11 +27,11 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+  --fontFamily-sans: Poppins, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
+  --fontFamily-serif: "Poppins", "Georgia", Cambria, "Times New Roman", Times,
+    serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -47,7 +47,7 @@
   --lineHeight-relaxed: 1.625;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
-  --fontSize-1: 1rem;
+  --fontSize-1: 1.6rem;
   --fontSize-2: 1.2rem;
   --fontSize-3: 1.44rem;
   --fontSize-4: 1.728rem;
@@ -72,9 +72,10 @@
 
 html {
   line-height: var(--lineHeight-normal);
-  font-size: var(--fontSize-root);
+  /* font-size: var(--fontSize-root); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%; 
 }
 
 body {
@@ -223,9 +224,7 @@ table {
   border-spacing: 0.25rem;
 }
 
-table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
-}
+
 
 /* Link */
 
@@ -333,3 +332,129 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+.card .ast-oembed-container {
+  position: relative;
+}
+.card .ast-oembed-container:nth-child(even):before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  display: inline-block;
+  background-image: url("../images/videoArrowL.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10rem;
+  width: 10rem;
+  z-index: 2;
+  background-color:transparent;
+}
+.card .ast-oembed-container:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  display: inline-block;
+  background-image: url("../images/videoArrowR.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10rem;
+  width: 10rem;
+  z-index: 2;
+  background-color:transparent;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  top: 95%;
+  background-image: url("../images/hoverLine.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1rem;
+  width: 9rem;
+}
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 65%;
+  right: 0;
+  background-image: url("../images/Vector.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25rem;
+  width: 20rem; 
+  
+}
+@media (min-width: 500px) {
+  .about-section::before {
+    top: 10%;
+  }
+  
+}
+
+  .relative::before {
+    content: "";
+    position: absolute;
+    top: 95%;
+    
+    left: 5%;
+    background-image: url("../images/videoArrowR.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 7rem;
+    width: 7rem; 
+    -webkit-transform:rotate(286deg);
+  -moz-transform: rotate(286deg);
+  -ms-transform: rotate(286deg);
+  -o-transform: rotate(286deg);
+  transform: rotate(286deg);
+  
+  }
+  @media (min-width: 769px) {
+    .relative::before {
+      left: -30%;
+    }
+  }
+
+@media (min-width: 769px) {
+.whatDoIDo-section::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 0;
+  background-image: url("../images/VectorL.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25rem;
+  width: 20rem; 
+}
+}
+.whatDoIDo-section__heading::before {
+  content: "";
+  position: absolute;
+  top: 95%;
+    right: 17%;
+  background-image: url("../images/hoverLineWhite.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1rem;
+  width: 9rem;
+
+}
+@media (min-width: 769px) {
+  .testimonials-slider-section__slide-text-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 17%;
+    background-image: url("../images/quote.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10rem;
+    width: 10rem;
+    z-index: -1;
+  
+  }
+}
+

@@ -1,0 +1,92 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+.main__nav {
+    display: flex;
+}
+.nav__menu {
+    background-color: $white;
+    display: flex;
+    padding: 0;
+    position: absolute;
+    top: 13rem;
+    left: -60rem;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow-y: hidden;
+    transition: visibility 0.5s, opacity 0.5s;
+    @include easeOut;
+    @include mediaMd {
+        left: -853px;
+    }
+    @media (min-width: 880px) {
+        z-index: 1;
+        position: relative;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3rem;
+    }
+}
+.menu-show {   
+    left: 0;
+}
+.nav__content-wrapper {
+    display: flex;
+   
+}
+.main-nav__button-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    
+}
+.nav__menu-item {
+    cursor: pointer;
+    padding: 2.5rem 2rem 2.5rem 2rem;
+
+    @media (min-width: 880px) {
+        padding: 0.2rem 1rem;
+        margin: 0.3rem;
+        cursor: pointer;
+    }
+}
+.nav__menu-item:hover {
+    background-color: $green;
+    .nav__menu-link {
+        color: $white;
+
+    }    
+
+}
+.nav__menu-link {
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: $blue;  
+    cursor: pointer;
+    @media (min-width: 880px) {
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+    
+}
+.nav__menu-item:nth-child(2) .nav__menu-link {
+    color: $green;
+    @media (min-width: 880px) {
+        color: $blue;
+    }
+}
+.nav__menu-item:nth-child(2):hover {
+    background-color: $blue;
+    .nav__menu-link {
+        color: $green;
+        
+    }
+
+} 

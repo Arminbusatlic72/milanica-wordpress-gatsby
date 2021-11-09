@@ -1,0 +1,20 @@
+.global-header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.global-header {   
+    position: relative;
+    height: 147px;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 0;
+}
+.global-header__wrapper-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

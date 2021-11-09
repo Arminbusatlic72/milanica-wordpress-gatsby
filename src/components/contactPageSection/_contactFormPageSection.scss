@@ -1,0 +1,13 @@
+@import "../../scss/variables.scss";
+.contact-form-page-section {
+background-color: $green;
+&__heading {
+    color:$blue;
+        font-weight: bold;
+        font-size: 3.2rem;
+}
+&__subheading {
+    color: $white;
+    font-size: 1.4rem;
+}
+}

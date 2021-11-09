@@ -1,0 +1,33 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+.whyToWorkWithMe-section__item {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 1.4;
+    color: $blue;
+    border-radius: 20px;
+    background:linear-gradient(to right,#6BF0D4, $white); 
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    text-align: left;
+    @include mediaMd {
+    flex-direction: column;
+    background:linear-gradient(#6BF0D4, $white); 
+    text-align: center;
+    
+
+    }
+
+}
+.whyToWorkWithMe-section__item::before {
+    counter-increment: section;                   
+    content: counter(section); 
+    font-size: 3.9rem;
+    padding: 2rem;
+
+    @include mediaMd {
+        font-size: 5.9rem;
+    } 
+    font-weight: bold;   
+                                                     
+  }

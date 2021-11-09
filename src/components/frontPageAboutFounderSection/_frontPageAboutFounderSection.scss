@@ -1,0 +1,40 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.about-founder-section {
+    padding-top: 3rem;
+    padding-bottom: 16rem;
+    
+    &__image-wrapper {
+    width: 100%;
+    text-align: center;
+    @include mediaLg {
+      text-align: left;
+    }
+    }
+    &__text-wrapper {
+      text-align: center;
+      @include mediaLg {
+        text-align: left;
+      }
+    }
+    &__heading {
+      font-size: 3.2rem;
+        font-weight: bold;
+        line-height: 1.7;
+        margin-top: 0;
+        color: $blue;
+
+    }
+    &__heading-green {
+      color: $green;
+    }
+}
+.img-rounded {
+  display: inline-block;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 50%;
+}

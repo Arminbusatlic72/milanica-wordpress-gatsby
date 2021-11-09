@@ -1,0 +1,45 @@
+@import "../../scss/mixins.scss";
+.nav__btn {
+    z-index: 13;
+    cursor: pointer;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    @include easeOut;
+    @media (min-width: 880px) {
+      display:none;
+    }
+  }
+  .nav__btn:focus {
+    outline: none;
+  }
+  .nav__line {
+    width: 2.4rem;
+    height: 0.3rem;
+    margin-bottom: 0.8rem;
+    background-color: $black;
+    border-radius: 20px;
+    
+  }
+  .btn__rotate:focus {
+    outline: none;
+  }
+  .btn__rotate {
+    transform: rotate(180deg);
+    @include easeOut;
+    .nav__line {
+      width: 2.4rem;
+      height: 0.3rem;
+      margin-bottom: 0.8rem;
+      background: $black;
+      @include easeOut;
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 7px);
+      } 
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate(0px, 0px);
+      }
+    }
+  }

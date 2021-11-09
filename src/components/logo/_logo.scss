@@ -1,0 +1,8 @@
+@import "../../scss/mixins.scss";
+
+.logo {
+    width: 12.5rem;
+    @include mediaLg {
+        width: 17.5rem;
+    }
+}

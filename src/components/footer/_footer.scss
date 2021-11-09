@@ -1,0 +1,12 @@
+@import "../../scss/variables.scss";
+.main-footer {
+    text-align: center;
+    background-color: $blue;
+    color:$white;
+    padding: 6.5rem 2rem;
+}
+.green {
+    background-color: $green;
+    color: $blue;
+    margin-bottom: 6rem;
+}

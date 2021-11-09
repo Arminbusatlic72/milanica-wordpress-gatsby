@@ -1,0 +1,13 @@
+@import "../../scss/mixins.scss";
+.stars-wrapper {
+    display: flex;
+    margin-bottom: 1.5rem;
+ @include mediaMd {
+        margin-bottom: 4.5rem;
+    }
+}
+.star-wrapper {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
