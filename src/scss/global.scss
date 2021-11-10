@@ -31,6 +31,16 @@
   padding-left: 7rem;
 }
 }
+
+.column-50 {
+  padding: 1rem;
+  width: 100%;
+@media (min-width: 880px) {
+display: flex;
+flex-direction: column;
+width: 50%;
+}
+}
 .column-33 {
   width: 100%;
   @include mediaLg {
