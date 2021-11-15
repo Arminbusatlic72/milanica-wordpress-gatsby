@@ -24,10 +24,18 @@ const AboutPageSection = props => {
         <p className="about-page-section__position">
           {data.aboutPageSection.aboutPagePosition}
         </p>
-        <p>{data.aboutPageSection.aboutPageText}</p>
-        <p>{data.aboutPageSection.aboutPageText1}</p>
-        <p>{data.aboutPageSection.aboutPageText2}</p>
-        <p>{data.aboutPageSection.aboutPageText3}</p>
+        <p className="about-page-section__paragraph">
+          {data.aboutPageSection.aboutPageText}
+        </p>
+        <p className="about-page-section__paragraph">
+          {data.aboutPageSection.aboutPageText1}
+        </p>
+        <p className="about-page-section__paragraph">
+          {data.aboutPageSection.aboutPageText2}
+        </p>
+        <p className="about-page-section__paragraph">
+          {data.aboutPageSection.aboutPageText3}
+        </p>
       </div>
     </section>
   )

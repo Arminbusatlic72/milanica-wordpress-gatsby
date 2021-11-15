@@ -4,6 +4,9 @@
     display: inline-block;
     padding: 2rem 0;
     width: 100%;
+    textarea {
+      margin-bottom: 0!important;
+    }
     &__label {
         font-size: 1.4rem;
         color:$blue;
@@ -21,7 +24,7 @@
         border-right: none;
         background-color: transparent;
         margin: 1rem;
-    
+        
     }
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

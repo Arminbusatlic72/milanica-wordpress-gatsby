@@ -80,7 +80,9 @@ const FrontPageAboutSection = props => {
                   : "about-section__tabs-content"
               }
             >
-              {data.frontPageAboutSection.accordion.accordion1Text}
+              <p className="about-section__tabs-content-paragraph">
+                {data.frontPageAboutSection.accordion.accordion1Text}
+              </p>
             </div>
             <div
               className={
@@ -89,7 +91,9 @@ const FrontPageAboutSection = props => {
                   : "about-section__tabs-content"
               }
             >
-              {data.frontPageAboutSection.accordion.accordion2Text}
+              <p className="about-section__tabs-content-paragraph">
+                {data.frontPageAboutSection.accordion.accordion2Text}
+              </p>
             </div>
             <div
               className={
@@ -98,7 +102,9 @@ const FrontPageAboutSection = props => {
                   : "about-section__tabs-content"
               }
             >
-              {data.frontPageAboutSection.accordion.accordion3Text}
+              <p className="about-section__tabs-content-paragraph">
+                {data.frontPageAboutSection.accordion.accordion3Text}
+              </p>
             </div>
 
             <Button link={`/${data.frontPageAboutSection.button.title}`}>

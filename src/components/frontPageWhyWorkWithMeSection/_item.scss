@@ -3,7 +3,7 @@
 .whyToWorkWithMe-section__item {
     display: flex;
     font-size: 1.4rem;
-    font-weight: 1.4;
+    line-height: 2;
     color: $blue;
     border-radius: 20px;
     background:linear-gradient(to right,#6BF0D4, $white); 
@@ -22,11 +22,12 @@
 .whyToWorkWithMe-section__item::before {
     counter-increment: section;                   
     content: counter(section); 
-    font-size: 3.9rem;
+    font-size: 4rem;
     padding: 2rem;
+    font-weight: 900;
 
     @include mediaMd {
-        font-size: 5.9rem;
+        font-size: 5rem;
     } 
     font-weight: bold;   
                                                      

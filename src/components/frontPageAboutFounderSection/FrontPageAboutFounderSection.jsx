@@ -33,7 +33,9 @@ const FrontPageAboutFounderSection = props => {
                 </span>
                 {` ${data.frontPageAboutFounderSection.foundertitlesecondline}`}
               </h2>
-              <p>{data.frontPageAboutFounderSection.foundertext}</p>
+              <p className="about-founder-section__paragraph">
+                {data.frontPageAboutFounderSection.foundertext}
+              </p>
             </div>
           </div>
         </div>

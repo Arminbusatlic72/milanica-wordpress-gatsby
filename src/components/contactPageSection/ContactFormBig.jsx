@@ -56,7 +56,6 @@ const ContactFormBig = props => {
       <button className="button" type="submit">
         Submit
       </button>
-      <input type="reset" value="Clear" />
     </form>
   )
 }

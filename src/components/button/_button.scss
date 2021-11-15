@@ -6,12 +6,15 @@
     font-size: 1.2rem;
     line-height: 1.2;
     font-weight: 700;
-    width: 15.2rem;
+    width: auto;
+    min-width: 15.2rem;
     padding: 1.7rem 2.5rem;
     border-radius: $border-radius;
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
+    box-shadow: 8px 11px 37px 6px rgba(0, 0, 0, 0.22);
+    transition: 0.1s;
     &__content-wrapper {
       display: flex;
       align-items: center;
@@ -20,6 +23,15 @@
     &__arrow {
       margin-left: 1rem;
     }
+    
   }
-  
+  .button:hover {
+    background-color: $green;
+    color: $blue;
+    &__arrow {
+      fill: $blue;
+    }
+    
+
+  }
   

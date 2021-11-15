@@ -2,18 +2,37 @@
 @import "../../scss//mixins.scss";
 .card {
     position: relative;
-    
     @include mediaLg {
         padding-left: 5rem;
-
     }
     &__heading-wrapper {
-        padding-left: 3rem;
+        padding-left: 9rem;
         position: relative;
-        @include mediaLg {
-            padding: 0;
+    }
+    &__heading {
+        font-size: 2.6rem;
+        line-height: 3.8rem;
+        font-weight: 700;
+        color:$blue;
+        @include mediaMd {
+            font-size: 3.6rem;
+            line-height: 4.6rem;
+
         }
-       
+    }
+    &__content {
+        @include mediaMd {
+            padding-left: 9rem;
+        }
+        h6 {
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            font-weight: 500;
+            color: $green;
+            @include mediaMd {
+                color:$blue
+            }
+        }
     }
     
 iframe {
@@ -26,24 +45,31 @@ iframe {
 
 ul{
     margin-bottom: 3rem;
+    list-style-position: outside;
+    margin-left: 2rem;
 }
 li {
     margin-bottom: 3rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    font-weight: 500;
+    color: $blue;
 }
 }
 .card::before {
-    
     position: absolute;
-    top: -2rem;
-    left: 0;
+    top: 0;
+    left: 3rem;
     counter-increment: section;                   
     content: counter(section); 
     font-size: 2.6rem;
-    font-weight: bold;  
+    line-height: 4.2rem;
+    font-weight: 700;  
     color: $blue;
     @include mediaLg {
         top: 1rem;
-        font-size: 5.9rem;
+        font-size: 5.8rem;
+        line-height: 4.2rem;
 
     }
     

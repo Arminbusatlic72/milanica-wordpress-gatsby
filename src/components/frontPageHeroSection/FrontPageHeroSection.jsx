@@ -44,10 +44,10 @@ const FrontPageHeroSection = props => {
             <h2 className="hero-section__subheading">
               {data.frontPageHeroSection.subheading}
             </h2>
+            <Button link={`/${data.frontPageAboutSection.button.title}`}>
+              {data.frontPageHeroSection.button.title}
+            </Button>
           </div>
-          <Button link={`/${data.frontPageAboutSection.button.title}`}>
-            {data.frontPageHeroSection.button.title}
-          </Button>
         </div>
       </div>
     </section>

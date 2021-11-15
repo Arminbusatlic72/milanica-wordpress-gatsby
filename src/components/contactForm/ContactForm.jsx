@@ -43,8 +43,9 @@ const ContactForm = props => {
           className="contact-form__input"
         />
       </label>
-      <button type="submit">Send</button>
-      <input type="reset" value="Clear" />
+      <button className="button" type="submit">
+        Send
+      </button>
     </form>
   )
 }

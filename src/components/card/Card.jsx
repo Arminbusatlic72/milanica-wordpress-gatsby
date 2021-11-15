@@ -7,7 +7,7 @@ const Card = props => {
         <h3 className="card__heading">{props.question}</h3>
       </div>
       <div
-        className="card-content"
+        className="card__content"
         contentEditable="true"
         dangerouslySetInnerHTML={{
           __html: props.answer,

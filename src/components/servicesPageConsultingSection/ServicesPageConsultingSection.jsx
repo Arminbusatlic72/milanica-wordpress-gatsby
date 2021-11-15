@@ -15,7 +15,9 @@ const ServicesPageConsultingSection = props => {
             <h6 className="consulting-section__subheading">
               {data.servicesPage.pagesubtitle}
             </h6>
-            <p>{data.servicesPage.text}</p>
+            <h6 className="consulting-section__text">
+              {data.servicesPage.text}
+            </h6>
           </div>
           <div className="column-60">
             <div className="consulting-section__blur-background"></div>
