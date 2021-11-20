@@ -32,7 +32,10 @@ const AnimatedOnlineLearningSection = props => {
           {data.servicePageAnimatedLearningSection.diagramDescription}
         </small>
         <Table tableData={data.servicesPageTable} />
-        <Button href={data.servicePageAnimatedLearningSection.button.url}>
+        <Button
+          link={data.servicePageAnimatedLearningSection.button.url}
+          className={``}
+        >
           {data.servicePageAnimatedLearningSection.button.title}
         </Button>
       </div>

@@ -1,4 +1,5 @@
 @import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
 
 .hero-section {
    overflow: auto;
@@ -7,17 +8,14 @@
     
     &__heading-wrapper {
        
-        @media (min-width: 768px) {
+        @include mediaLg {
             float: left;
             margin-left: 10rem;
         }
     }
-
     &__subheading-wrapper {
         width: 28rem;
-       
-      
-        @media (min-width: 768px) {
+        @include mediaLg {
             clear: left;
             margin-left: 10rem;
             
@@ -62,7 +60,7 @@
     display: inline-block;
    
 
-    @media (min-width: 768px) {
+    @include mediaMd {
         float: right;
     }
 }

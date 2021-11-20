@@ -1,15 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
+import UniversalLink from "../universalLink/UniversalLink"
 import Arrow from "../../assets/btnArrow.svg"
 
 const Button = props => {
   return (
-    <Link className={`button ${props.className}`} to={props.link}>
+    <UniversalLink className={`button ${props.className}`} to={props.link}>
       <div className="button__content-wrapper">
         {props.children}
         <Arrow className="button__arrow" />
       </div>
-    </Link>
+    </UniversalLink>
   )
 }
 export default Button

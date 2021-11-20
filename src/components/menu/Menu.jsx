@@ -10,9 +10,22 @@ const Menu = () => {
           node {
             menuItems {
               nodes {
+                childItems {
+                  nodes {
+                    label
+                    id
+                    url
+                    title
+                    path
+                    parentId
+                  }
+                }
                 id
                 label
                 url
+                title
+                path
+                parentId
               }
             }
           }
@@ -20,12 +33,34 @@ const Menu = () => {
       }
     }
   `)
+  console.log(data)
 
+  const flatListToHierarchical = (
+    data = [],
+    { idKey = "key", parentKey = "parentId", childrenKey = "children" } = {}
+  ) => {
+    const tree = []
+    const childrenOf = {}
+    data.forEach(item => {
+      const newItem = { ...item }
+      const { [idKey]: id, [parentKey]: parentId = 0 } = newItem
+      childrenOf[id] = childrenOf[id] || []
+      newItem[childrenKey] = childrenOf[id]
+      parentId
+        ? (childrenOf[parentId] = childrenOf[parentId] || []).push(newItem)
+        : tree.push(newItem)
+    })
+    return tree
+  }
+  let hierarchicalList = flatListToHierarchical(
+    data.allWpMenu.edges[0].node.menuItems.nodes
+  )
+  console.log(hierarchicalList)
   const [open, setOpen] = useState(false)
   return (
     <nav className="main__nav">
       <ul className={open === true ? "nav__menu menu-show" : "nav__menu"}>
-        {data.allWpMenu.edges[0].node.menuItems.nodes.map(node => {
+        {hierarchicalList.map(node => {
           return (
             <li key={node.id} className="nav__menu-item">
               <Link
@@ -36,6 +71,16 @@ const Menu = () => {
               >
                 {node.label}
               </Link>
+              <ul className="sub-menu">
+                {node.childItems &&
+                  node.childItems.nodes.map(node => (
+                    <li className="sub-menu__item" key={node.id}>
+                      <Link className="nav__menu-link" to={node.url}>
+                        {node.label}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
             </li>
           )
         })}

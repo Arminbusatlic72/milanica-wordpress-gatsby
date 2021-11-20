@@ -4,7 +4,7 @@ import Button from "../button/Button"
 
 const FrontPageHeroSection = props => {
   let data = props.heroData
-
+  console.log(data)
   return (
     <section className="hero-section">
       <div className="global-wrapper">
@@ -44,7 +44,7 @@ const FrontPageHeroSection = props => {
             <h2 className="hero-section__subheading">
               {data.frontPageHeroSection.subheading}
             </h2>
-            <Button link={`/${data.frontPageAboutSection.button.title}`}>
+            <Button className="" link={data.frontPageAboutSection.button.url}>
               {data.frontPageHeroSection.button.title}
             </Button>
           </div>
