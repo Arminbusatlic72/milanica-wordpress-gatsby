@@ -2,47 +2,50 @@
 @import "../../scss/variables.scss";
 
 .about-founder-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    
-    &__image-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__image-wrapper {
     width: 100%;
     text-align: center;
+    @include mediaXl {
+      text-align: left;
+    }
+  }
+  &__paragraph {
+    font-size: 1.4rem;
+    line-height: 2;
+    color: #1e0242;
+    font-weight: 700;
+  }
+  &__text-wrapper {
+    text-align: center;
+
     @include mediaLg {
       text-align: left;
     }
-    }
-    &__paragraph {
-      font-size: 1.4rem;
-    line-height: 2;
-    color: #1E0242;
-    font-weight: 700;
-
-    }
-    &__text-wrapper {
-      text-align: center;
-      
-      @include mediaLg {
-        text-align: left;
-      }
-    }
-    &__heading {
-      font-size: 3.2rem;
-        font-weight: bold;
-        line-height: 1.7;
-        margin-top: 0;
-        color: $blue;
-
-    }
-    &__heading-green {
-      color: $green;
-    }
+  }
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 1.7;
+    margin-top: 0;
+    color: $blue;
+  }
+  &__heading-green {
+    color: $green;
+  }
 }
 .img-rounded {
   display: inline-block;
   position: relative;
-  width: 350px;
-  height: 350px;
   overflow: hidden;
   border-radius: 50%;
+  width: 286px;
+  height: 286px;
+  background: $green center center url("/gradient-about-img.png");
+  @include mediaLg {
+    width: 350px;
+    height: 350px;
+  }
 }

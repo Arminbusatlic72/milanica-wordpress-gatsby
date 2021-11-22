@@ -52,6 +52,7 @@ const TestimonialSlider = () => {
     infinite: true,
     speed: 500,
     arrow: true,
+    fade: true,
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
   }

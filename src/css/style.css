@@ -30,9 +30,10 @@
   --fontFamily-sans: Poppins, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Poppins", "Georgia", Cambria, "Times New Roman", Times,
+  --fontFamily-serif: "Georgia", Cambria, "Times New Roman", Times,
     serif;
-  --font-body: var(--fontFamily-serif);
+  --fontFamily-secondary: "Roboto", "Helvetica Neue", Arial;
+  --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
   --fontWeight-medium: 500;
@@ -442,21 +443,6 @@ a:focus {
   height: 1rem;
   width: 9rem;
 
-}
-@media (min-width: 769px) {
-  .testimonials-slider-section__slide-text-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 17%;
-    background-image: url("../images/quote.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 10rem;
-    width: 10rem;
-    z-index: -1;
-  
-  }
 }
 
 .hero-section__heading--third::before {

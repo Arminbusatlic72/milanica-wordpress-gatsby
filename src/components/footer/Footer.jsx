@@ -9,15 +9,11 @@ const Footer = () => {
       <div className="global-wrapper">
         <LogoFooter />
         <FooterMenu />
-        <Button className={`green`} link={`/`}>
+        <Button className={`button-green`} link={`/`}>
           Start learning
         </Button>
-        <div>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-          {` `}
-          And <a href="https://wordpress.org/">WordPress</a>
+        <div className={`main-footer__copyright`}>
+          Learning Makeover | ©{new Date().getFullYear()}. 
         </div>
       </div>
     </footer>
