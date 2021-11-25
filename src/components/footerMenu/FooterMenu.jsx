@@ -1,10 +1,11 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import Icon from "./Icon"
 
 const FooterMenu = () => {
   const data = useStaticQuery(graphql`
     {
-      allWpMenu(filter: { name: { eq: "Primary Menu" } }) {
+      allWpMenu(filter: { name: { eq: "Footer Menu" } }) {
         edges {
           node {
             menuItems {
@@ -20,24 +21,11 @@ const FooterMenu = () => {
     }
   `)
   return (
-    <div className="footer-menu">
-      <ul className="footer-menu__nav-list">
-        {data.allWpMenu.edges[0].node.menuItems.nodes.map(node => {
-          return (
-            <li key={node.id} className="footer-menu__nav-list-item">
-              <Link
-                className="footer-menu__nav-link"
-                to={`${
-                  node.url !== "https://learningmakeover.com/" ? node.url : "/"
-                }`}
-              >
-                {node.label}
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <ul className="footer-menu__nav-list">
+      {data.allWpMenu.edges[0].node.menuItems.nodes.map(item => {
+        return <Icon menuData={item} />
+      })}
+    </ul>
   )
 }
 

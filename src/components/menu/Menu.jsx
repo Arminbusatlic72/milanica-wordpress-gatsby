@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import ButtonExternal from "../button/ButtonExternal"
+import Button from "../button/Button"
 import MenuItem from "./MenuItem"
 import DropdownMenuItem from "./DropDownMenuItem"
 
@@ -56,7 +56,7 @@ const Menu = () => {
   let hierarchicalList = flatListToHierarchical(
     data.allWpMenu.edges[0].node.menuItems.nodes
   )
-  console.log(hierarchicalList)
+
   const [open, setOpen] = useState(false)
   return (
     <nav className="main__nav">
@@ -73,9 +73,9 @@ const Menu = () => {
         })}
       </ul>
       <div className="main-nav__button-wrapper">
-        <ButtonExternal className={``} link={"/"}>
+        <Button className={``} link={"/"}>
           Start learning
-        </ButtonExternal>
+        </Button>
       </div>
       <div
         className={open === true ? "nav__btn btn__rotate" : "nav__btn"}

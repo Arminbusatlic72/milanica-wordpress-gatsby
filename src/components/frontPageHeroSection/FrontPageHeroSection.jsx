@@ -4,7 +4,7 @@ import Button from "../button/Button"
 
 const FrontPageHeroSection = props => {
   let data = props.heroData
-  console.log(data)
+
   return (
     <section className="hero-section">
       <div className="global-wrapper">

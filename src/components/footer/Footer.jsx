@@ -8,6 +8,7 @@ const Footer = () => {
     <footer className="main-footer">
       <div className="global-wrapper">
         <LogoFooter />
+
         <FooterMenu />
         <Button className={`button-green`} link={`https://www.youtube.com/`}>
           Start learning

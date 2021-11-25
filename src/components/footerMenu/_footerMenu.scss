@@ -1,23 +1,38 @@
 @import "../../scss//variables.scss";
 @import "../../scss/mixins.scss";
 .footer-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
+    
     font-size: 1.2rem;
     @include mediaMd {
         font-size: 1.4rem;
     }
 
     &__nav-list {
+        display: flex;
+        align-items: center;
+       justify-content: center;
        list-style: none;
-       display: flex;
+       
+       color:$white;
     }
     &__nav-list-item {
         padding: 1rem;
     }
     &__nav-link {
         text-decoration: none;
-        color:$white;
+        
+           
+    }
+    &__nav-link:hover {
+        opacity: 1;
     }
 }
+.icon-white {
+    color: $white;
+    font-size: 2rem;
+    opacity: 0.6;
+  }
+.icon-white:hover {
+      opacity: 1;
+  }

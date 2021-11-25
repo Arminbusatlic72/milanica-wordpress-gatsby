@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import UniversalLink from "../universalLink/UniversalLink"
 const DropdownMenuItem = ({ parent, children }) => {
   const [show, setShow] = useState(false)
-  console.log(parent)
+
   return (
     <li
       className={`nav__menu-item`}
