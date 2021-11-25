@@ -9,11 +9,11 @@ const Footer = () => {
       <div className="global-wrapper">
         <LogoFooter />
         <FooterMenu />
-        <Button className={`button-green`} link={`/`}>
+        <Button className={`button-green`} link={`https://www.youtube.com/`}>
           Start learning
         </Button>
         <div className={`main-footer__copyright`}>
-          Learning Makeover | ©{new Date().getFullYear()}. 
+          Learning Makeover | ©{new Date().getFullYear()}.
         </div>
       </div>
     </footer>

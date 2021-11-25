@@ -47,7 +47,7 @@ export const query = graphql`
             headingThirdLine
             subheading
             text
-            button {
+            herobutton {
               title
               url
             }
