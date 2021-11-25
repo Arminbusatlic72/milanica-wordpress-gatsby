@@ -105,17 +105,15 @@
   background-color: $white;
   &__item {
     width: 100%;
-
     padding: 2.5rem 2rem 2.5rem 2rem;
     z-index: 10;
   }
 }
 
-.nav__menu .nav__menu-item:hover,
-.nav__menu .nav__menu-item:focus-within {
-  .sub-menu {
-    visibility: visible;
-    opacity: 1;
-    display: flex;
-  }
+
+.dropdown-menu-show {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+
 }

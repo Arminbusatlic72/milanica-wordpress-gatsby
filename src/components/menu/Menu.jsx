@@ -1,6 +1,8 @@
 import React, { useState } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import ButtonExternal from "../button/ButtonExternal"
+import MenuItem from "./MenuItem"
+import DropdownMenuItem from "./DropDownMenuItem"
 
 const Menu = () => {
   const data = useStaticQuery(graphql`
@@ -33,7 +35,6 @@ const Menu = () => {
       }
     }
   `)
-  console.log(data)
 
   const flatListToHierarchical = (
     data = [],
@@ -60,28 +61,14 @@ const Menu = () => {
   return (
     <nav className="main__nav">
       <ul className={open === true ? "nav__menu menu-show" : "nav__menu"}>
-        {hierarchicalList.map(node => {
-          return (
-            <li key={node.id} className="nav__menu-item">
-              <Link
-                className="nav__menu-link"
-                to={`${
-                  node.url !== "https://learningmakeover.com/" ? node.url : "/"
-                }`}
-              >
-                {node.label}
-              </Link>
-              <ul className="sub-menu">
-                {node.childItems &&
-                  node.childItems.nodes.map(node => (
-                    <li className="sub-menu__item" key={node.id}>
-                      <Link className="nav__menu-link" to={node.url}>
-                        {node.label}
-                      </Link>
-                    </li>
-                  ))}
-              </ul>
-            </li>
+        {hierarchicalList.map(menuItem => {
+          const children = menuItem.childItems.nodes.length
+            ? menuItem.childItems.nodes
+            : null
+          return children ? (
+            <DropdownMenuItem parent={menuItem} children={children} />
+          ) : (
+            <MenuItem menuItem={menuItem} />
           )
         })}
       </ul>
