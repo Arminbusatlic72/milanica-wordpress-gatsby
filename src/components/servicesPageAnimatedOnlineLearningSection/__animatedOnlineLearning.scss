@@ -9,6 +9,12 @@
       text-align: left;
     }
   }
+  .table {
+    text-align: left;
+  }
+  .table:focus-visible {
+    outline: 0;
+  }
   &__heading {
     color: $blue;
     font-weight: 700;
