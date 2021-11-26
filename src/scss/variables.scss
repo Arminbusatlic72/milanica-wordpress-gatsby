@@ -1,11 +1,20 @@
-$blue : #1E0242;
+$blue: #1e0242;
 $white: #fff;
 $black: #000;
-$green: #6BF0D6;
-$pink: #CAC3D2;
-$background-color: #E5E5E5;
-$green-background:linear-gradient(131.34deg, rgba(94, 135, 120, 0.68) -5.61%, rgba(120, 255, 134, 0.68) 75.4%);
-$red-background: linear-gradient(to right, rgba(242, 47, 176, 0), rgba(242, 47, 176, 0.74));
+$green: #6bf0d6;
+$pink: #cac3d2;
+$background-color: #e5e5e5;
+$border-color: #e5e5e5;
+$green-background: linear-gradient(
+  131.34deg,
+  rgba(94, 135, 120, 0.68) -5.61%,
+  rgba(120, 255, 134, 0.68) 75.4%
+);
+$red-background: linear-gradient(
+  to right,
+  rgba(242, 47, 176, 0),
+  rgba(242, 47, 176, 0.74)
+);
 
-$blur:blur(200px);
+$blur: blur(200px);
 $border-radius: 0.7rem;

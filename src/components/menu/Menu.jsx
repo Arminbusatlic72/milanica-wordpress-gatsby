@@ -72,7 +72,7 @@ const Menu = () => {
           )
         })}
       </ul>
-      <Button className={`button--sm`} link={"/"}>
+      <Button className={`button--sm`} link={"/"} icon={false}>
         Start learning
       </Button>
       <div

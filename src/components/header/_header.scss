@@ -3,18 +3,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    display: flex;
+  }
 }
 .global-header {
   position: sticky;
   top: 0;
   width: 100%;
   margin: 0;
-  padding: 1rem 0;
+  padding: 1.3rem 0;
   background: $white;
   z-index: 100;
-  // @include mediaLg {
-  //     height: 147px;
-  // }
+  @include mediaLg {
+    //   height: 147px;
+    padding: 0;
+  }
 }
 .global-header__wrapper-right {
   display: flex;
