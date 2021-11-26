@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 3rem;
+    transition: none;
   }
 }
 .menu-show {
@@ -70,7 +71,7 @@
   color: $blue;
   cursor: pointer;
   @media (min-width: 880px) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 300;
   }
 }
@@ -110,10 +111,8 @@
   }
 }
 
-
 .dropdown-menu-show {
   visibility: visible;
   opacity: 1;
   display: flex;
-
 }

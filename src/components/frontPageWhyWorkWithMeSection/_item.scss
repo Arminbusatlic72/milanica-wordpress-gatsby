@@ -1,34 +1,55 @@
 @import "../../scss/variables.scss";
 @import "../../scss/mixins.scss";
 .whyToWorkWithMe-section__item {
-    display: flex;
-    font-size: 1.4rem;
-    line-height: 2;
-    color: $blue;
-    border-radius: 20px;
-    background:linear-gradient(to right,#6BF0D4, $white); 
-    padding: 3rem 2rem;
-    margin-bottom: 3rem;
-    text-align: left;
-    @include mediaMd {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 2;
+  color: $blue;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(107, 240, 212, 0.4) 0%,
+    rgba(107, 240, 212, 0) 100%
+  );
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+  position: relative;
+  font-weight: 500;
+  @include mediaMd {
+    margin-bottom: 0;
+    padding: 0 3rem 14rem;
     flex-direction: column;
-    background:linear-gradient(#6BF0D4, $white); 
+    background: linear-gradient(
+      180deg,
+      rgba(107, 240, 212, 0.6) 0%,
+      rgba(107, 240, 212, 0) 100%
+    );
     text-align: center;
-    
-
-    }
-
+  }
 }
 .whyToWorkWithMe-section__item::before {
-    counter-increment: section;                   
-    content: counter(section); 
-    font-size: 4rem;
-    padding: 2rem;
-    font-weight: 900;
+  counter-increment: section;
+  content: counter(section);
+  font-size: 4rem;
+  padding: 2rem;
+  font-weight: 700;
 
-    @include mediaMd {
-        font-size: 5rem;
-    } 
-    font-weight: bold;   
-                                                     
+  @include mediaMd {
+    padding: 0;
+    font-size: 5rem;
   }
+}
+
+.whyWorkWithMe-section
+  .column-33:last-of-type
+  .whyToWorkWithMe-section__item::after {
+  content: "";
+  position: absolute;
+  background: url("/pink-gradient.png");
+  width: 583px;
+  height: 550px;
+  right: -249px;
+  bottom: -248px;
+}

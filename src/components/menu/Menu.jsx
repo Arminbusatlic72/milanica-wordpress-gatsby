@@ -72,11 +72,9 @@ const Menu = () => {
           )
         })}
       </ul>
-      <div className="main-nav__button-wrapper">
-        <Button className={``} link={"/"}>
-          Start learning
-        </Button>
-      </div>
+      <Button className={`button--sm`} link={"/"}>
+        Start learning
+      </Button>
       <div
         className={open === true ? "nav__btn btn__rotate" : "nav__btn"}
         onClick={() => setOpen(!open)}

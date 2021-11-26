@@ -11,7 +11,7 @@ const FrontPageAboutSection = props => {
     <section className="about-section">
       <div className="global-wrapper">
         <div className="row">
-          <div className="column-40">
+          <div className="column-36">
             <GatsbyImage
               className="img"
               image={
@@ -25,7 +25,7 @@ const FrontPageAboutSection = props => {
               style={{ marginBottom: `1.45rem` }}
             />
           </div>
-          <div className="column-60">
+          <div className="column-64">
             <div className="about-section__heading-wrapper">
               <h2 className="about-section__heading">
                 {data.frontPageAboutSection.title}
@@ -72,39 +72,40 @@ const FrontPageAboutSection = props => {
                 {data.frontPageAboutSection.accordion.accordion3Title}
               </div>
             </div>
-
-            <div
-              className={
-                toggleState === 1
-                  ? "about-section__tabs-content active-content"
-                  : "about-section__tabs-content"
-              }
-            >
-              <p className="about-section__tabs-content-paragraph">
-                {data.frontPageAboutSection.accordion.accordion1Text}
-              </p>
-            </div>
-            <div
-              className={
-                toggleState === 2
-                  ? "about-section__tabs-content active-content"
-                  : "about-section__tabs-content"
-              }
-            >
-              <p className="about-section__tabs-content-paragraph">
-                {data.frontPageAboutSection.accordion.accordion2Text}
-              </p>
-            </div>
-            <div
-              className={
-                toggleState === 3
-                  ? "about-section__tabs-content active-content"
-                  : "about-section__tabs-content"
-              }
-            >
-              <p className="about-section__tabs-content-paragraph">
-                {data.frontPageAboutSection.accordion.accordion3Text}
-              </p>
+            <div className="about-section__tabs-content-wrap">
+              <div
+                className={
+                  toggleState === 1
+                    ? "about-section__tabs-content active-content"
+                    : "about-section__tabs-content"
+                }
+              >
+                <p className="about-section__tabs-content-paragraph">
+                  {data.frontPageAboutSection.accordion.accordion1Text}
+                </p>
+              </div>
+              <div
+                className={
+                  toggleState === 2
+                    ? "about-section__tabs-content active-content"
+                    : "about-section__tabs-content"
+                }
+              >
+                <p className="about-section__tabs-content-paragraph">
+                  {data.frontPageAboutSection.accordion.accordion2Text}
+                </p>
+              </div>
+              <div
+                className={
+                  toggleState === 3
+                    ? "about-section__tabs-content active-content"
+                    : "about-section__tabs-content"
+                }
+              >
+                <p className="about-section__tabs-content-paragraph">
+                  {data.frontPageAboutSection.accordion.accordion3Text}
+                </p>
+              </div>
             </div>
 
             <Button link={`/${data.frontPageAboutSection.button.title}`}>

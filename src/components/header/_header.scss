@@ -1,20 +1,23 @@
 .global-header__container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.global-header {   
-    position: relative;
-    height: 147px;
-    width: 100%;
-    margin: 0;
-    padding: 2rem 0;
+.global-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+  background: $white;
+  z-index: 100;
+  // @include mediaLg {
+  //     height: 147px;
+  // }
 }
 .global-header__wrapper-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -31,7 +31,6 @@ const FrontPageHeroSection = props => {
               layout="fullWidth"
               formats={["AUTO", "WEBP", "AVIF"]}
               alt={data.frontPageHeroSection.heroImage.altText}
-              style={{ marginBottom: `1.45rem` }}
             />
 
             <div className="hero-section__paragraph-wrapper">

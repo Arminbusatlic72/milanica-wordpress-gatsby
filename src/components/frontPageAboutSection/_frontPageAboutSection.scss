@@ -5,9 +5,12 @@
   clear: both;
   background-color: $green;
   color: $white;
-  padding-top: 6rem;
-  padding-bottom: 16rem;
+  padding: 6rem 0 15rem;
   position: relative;
+  @include mediaLg {
+    padding: 8.5rem 0;
+  }
+
   &__blur-background {
     background: $green-background;
     filter: $blur;
@@ -28,22 +31,19 @@
   &__heading {
     color: $white;
     font-size: 3.2rem;
-    font-weight: 900;
-    line-height: 1.7;
+    font-weight: 700;
+    line-height: 4.2rem;
     margin-top: 0;
   }
   &__heading-wrapper {
-    padding-right: 7rem;
+    margin-bottom: 25px;
     @media (min-width: 617px) {
       padding-right: 25rem;
     }
-    // @media (min-width:750px) {
-    //     padding-right: 27rem;
-    // }
   }
   &__tabs-nav {
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 2.6rem;
   }
   &__tabs-nav-item {
     font-size: 1.6rem;
@@ -60,6 +60,10 @@
     border: none;
   }
 
+  &__tabs-content-wrap {
+    margin-bottom: 1rem;
+  }
+
   &__tabs-content {
     display: none;
     min-height: 25rem;
@@ -71,11 +75,11 @@
     font-size: 1.4rem;
     line-height: 2;
     color: $blue;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 .active {
-  font-weight: 900;
+  font-weight: 700;
 }
 .active-content {
   display: block;
