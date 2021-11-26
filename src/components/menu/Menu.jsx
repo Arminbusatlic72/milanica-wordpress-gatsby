@@ -66,9 +66,13 @@ const Menu = () => {
             ? menuItem.childItems.nodes
             : null
           return children ? (
-            <DropdownMenuItem parent={menuItem} children={children} />
+            <DropdownMenuItem
+              key={menuItem.id}
+              parent={menuItem}
+              children={children}
+            />
           ) : (
-            <MenuItem menuItem={menuItem} />
+            <MenuItem key={menuItem.id} menuItem={menuItem} />
           )
         })}
       </ul>

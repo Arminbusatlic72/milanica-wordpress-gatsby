@@ -23,7 +23,7 @@ const FooterMenu = () => {
   return (
     <ul className="footer-menu__nav-list">
       {data.allWpMenu.edges[0].node.menuItems.nodes.map(item => {
-        return <Icon menuData={item} />
+        return <Icon key={item.id} menuData={item} />
       })}
     </ul>
   )
