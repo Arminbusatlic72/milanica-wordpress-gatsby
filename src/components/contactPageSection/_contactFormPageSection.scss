@@ -1,13 +1,22 @@
 @import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
 .contact-form-page-section {
-background-color: $green;
-&__heading {
-    color:$blue;
-        font-weight: bold;
-        font-size: 3.2rem;
-}
-&__subheading {
+  @include pagePaddings;
+  background-color: $green;
+  &__title {
+    margin-bottom: 4.5rem;
+    @include mediaLg {
+      margin-bottom: 8.5rem;
+    }
+  }
+  &__heading {
+    color: $blue;
+    font-weight: bold;
+    font-size: 3.2rem;
+  }
+  &__subheading {
     color: $white;
     font-size: 1.4rem;
-}
+  }
 }

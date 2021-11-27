@@ -6,6 +6,9 @@ const ContactPageSection = () => {
   return (
     <section className="contact-form-page-section">
       <div className="global-wrapper">
+        <h2 className="page-heading contact-form-page-section__title">
+          Contact
+        </h2>
         <Icon />
         <h6 className="contact-form-page-section__subheading">Get in touch</h6>
         <h2 className="contact-form-page-section__heading">

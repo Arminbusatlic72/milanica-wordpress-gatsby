@@ -9,7 +9,7 @@ const AnimatedOnlineLearningSection = props => {
     <section className="animated-online-learning-section">
       <div className="global-wrapper">
         <div className="animated-online-learning-section__heading-wrapper">
-          <h2 className="animated-online-learning-section__heading">
+          <h2 className="animated-online-learning-section__heading page-heading">
             {data.servicePageAnimatedLearningSection.title}
           </h2>
           <h5 className="animated-online-learning-section__subheading">

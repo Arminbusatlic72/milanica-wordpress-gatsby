@@ -33,7 +33,9 @@ const TestimonialsPageSection = props => {
   return (
     <section className="testimonials-page-section">
       <div className="global-wrapper">
-        <h2 className="testimonials-page-section__heading">Testimonials</h2>
+        <h2 className="testimonials-page-section__heading page-heading">
+          Testimonials
+        </h2>
         <Tabs tabsData={data.allWpTestimonial} />
       </div>
     </section>

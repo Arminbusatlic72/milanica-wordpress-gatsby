@@ -1,14 +1,17 @@
 @import "../../scss/variables.scss";
 .contact-form-section {
-    background-color: $green;
-    &__subheading {
-        color:$white;
-        font-size: 1.4rem;
-    }
-    &__heading {
-        color:$blue;
-        font-weight: bold;
-        font-size: 3.2rem;
-
-    }
+  padding: 5.5rem 0 10rem;
+  @include mediaLg {
+    padding: 5.3rem 0 8.9rem;
+  }
+  background-color: $green;
+  &__subheading {
+    color: $white;
+    font-size: 1.4rem;
+  }
+  &__heading {
+    color: $blue;
+    font-weight: bold;
+    font-size: 3.2rem;
+  }
 }

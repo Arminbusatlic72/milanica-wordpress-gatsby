@@ -1,6 +1,7 @@
 @import "../../scss//variables.scss";
 @import "../../scss/mixins.scss";
 .animated-online-learning-section {
+  @include pagePaddings;
   text-align: center;
   &__heading-wrapper {
     text-align: center;

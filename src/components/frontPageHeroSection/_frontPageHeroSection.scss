@@ -58,6 +58,12 @@
   position: relative;
   display: inline-block;
 
+  .gatsby-image-wrapper {
+    border-radius: 0 82px 0;
+    overflow: hidden;
+    display: block;
+  }
+
   @include mediaLg {
     float: right;
   }

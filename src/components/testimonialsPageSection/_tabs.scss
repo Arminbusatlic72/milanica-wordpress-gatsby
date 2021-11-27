@@ -1,105 +1,98 @@
 @import "../../scss/variables.scss";
 @import "../../scss/mixins.scss";
 .tabs {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .tab-nav-list {
-    width: 50%;
+  width: 50%;
 }
 .tab-nav-list-item {
-    border-radius: $border-radius;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
-    height: 8rem;
-    @include mediaMd {
-        height: 10rem;
-    }
-    background-color: transparent;
-
+  border-radius: $border-radius;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  height: 8rem;
+  @include mediaMd {
+    height: 10rem;
+  }
+  background-color: transparent;
 }
 .tab-heading-wrapper {
-    @include mediaMd {
-        padding: 0 2rem;
-    }
-    width: 80%;
+  @include mediaMd {
+    padding: 0 2rem;
+  }
+  width: 80%;
 }
 .tab-heading {
-font-size: 1.2rem;
-@include mediaMd {
-font-size: 1.8rem;
-
-}
-font-weight: bold;
-color:$blue;
-margin: 0;
+  font-size: 1.2rem;
+  @include mediaMd {
+    font-size: 1.8rem;
+  }
+  font-weight: bold;
+  color: $blue;
+  margin: 0;
 }
 .tab-position {
-font-size: 1.2rem;
-@include mediaMd {
+  font-size: 1.2rem;
+  @include mediaMd {
     font-size: 1.4rem;
-}
-font-weight: normal;
-color: gray;
-margin: 0;
+  }
+  font-weight: normal;
+  color: gray;
+  margin: 0;
 }
 .tab-content {
-    display: none;
-    width: 50%;
-    padding-left: 3rem;
-    transition-property: all;
-    transition-duration: 2s;
-    @include mediaLg {
-        padding-left: 5rem ;
-
+  display: none;
+  width: 50%;
+  padding-left: 3rem;
+  transition-property: all;
+  transition-duration: 2s;
+  @include mediaLg {
+    padding-left: 5rem;
+  }
+  &__heading {
+    font-size: 1.2rem;
+    @include mediaMd {
+      font-size: 1.8rem;
     }
-    &__heading {
-        font-size: 1.2rem;
-        @include mediaMd {
-        font-size: 1.8rem;
-        }
-        margin: 0;
-        color:$blue;
-        margin-bottom: 1.4rem;
+    margin: 0;
+    color: $blue;
+    margin-bottom: 1.4rem;
+  }
+  &__text {
+    font-size: 1.2rem;
+    min-height: 700px;
+    font-weight: 500;
+    color: $blue;
+    @include mediaMd {
+      font-size: 1.4rem;
+      line-height: 1.8;
     }
-    &__text {
-        font-size: 1.2rem;
-        min-height: 100vh;
-        @include mediaMd {
-            font-size: 1.4rem;
-            line-height: 1.8;
-        }  
-        color: $blue;
-        font-weight: bold;
-    }
-    
-
+  }
 }
 .tab-img-rounded {
-    display: none;
-    @include mediaMd {
-        display: inline-block;
-
-    }
-    position: relative;
-    width: 6rem;
-    height: 6rem;
-    overflow: hidden;
-    border-radius: 50%;
-    
+  display: none;
+  @include mediaMd {
+    display: inline-block;
+  }
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .active-1 {
-    font-weight: bold;
-    background-color: $white;
-    border: transparent;
+  font-weight: bold;
+  background-color: $white;
+  border: transparent;
 }
 .active-content {
-    display: block;
+  display: block;
 }

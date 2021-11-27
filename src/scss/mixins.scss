@@ -21,3 +21,10 @@
     @content;
   }
 }
+
+@mixin pagePaddings {
+  padding: 4.5rem 0 9rem;
+  @include mediaLg {
+    padding: 9rem 0 14rem;
+  }
+}

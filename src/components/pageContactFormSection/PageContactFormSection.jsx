@@ -14,7 +14,7 @@ const PageContactFormSection = () => {
         <ContactForm
           name="Hey, may name is"
           email="My email is"
-          subject="And I am looking for"
+          subject="and I am looking for"
           message="This is my message"
         />
       </div>
