@@ -7,10 +7,9 @@ const ContactFormBig = props => {
       className="contact-form"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      netlify
     >
       <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contact1" />
       <label className="contact-form__label">
         {props.name}
         <input
