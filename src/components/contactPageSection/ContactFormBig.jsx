@@ -3,6 +3,7 @@ import React from "react"
 const ContactFormBig = props => {
   return (
     <form
+      name="learning-makeover-contact-form"
       method="POST"
       className="contact-form"
       data-netlify="true"
