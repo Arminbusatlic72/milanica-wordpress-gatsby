@@ -10,7 +10,11 @@ const ContactFormBig = props => {
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact1" />
+      <input
+        type="hidden"
+        name="learning-makeover-contact-form"
+        value="learning-makeover-contact-form"
+      />
       <label className="contact-form__label">
         {props.name}
         <input
