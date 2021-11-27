@@ -2,7 +2,7 @@ import React from "react"
 
 const ContactFormBig = props => {
   return (
-    <form method="post" action="#" className="contact-form">
+    <form method="post" action="#" className="contact-form" data-netlify="true">
       <label className="contact-form__label">
         {props.name}
         <input

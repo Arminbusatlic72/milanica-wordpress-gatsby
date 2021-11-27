@@ -1,5 +1,5 @@
 import React from "react"
-import Star from "../../assets/star.svg"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Stars = props => {
   let data = props.starsData
@@ -7,9 +7,12 @@ const Stars = props => {
   let stars = []
   for (let i = 0; i < data; i++) {
     stars.push(
-      <span className="star-wrapper" key={Math.random()}>
-        <Star />
-      </span>
+      <StaticImage
+        key={Math.random()}
+        className="star-wrapper"
+        src="../../images/star1.png"
+        alt="star"
+      />
     )
   }
   return <div className="stars-wrapper">{stars}</div>
