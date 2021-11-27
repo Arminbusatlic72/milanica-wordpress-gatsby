@@ -2,7 +2,13 @@ import React from "react"
 
 const ContactForm = props => {
   return (
-    <form method="post" action="#" className="contact-form" data-netlify="true">
+    <form
+      method="post"
+      // action="#"
+      className="contact-form"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <label className="contact-form__label">
         {props.name}
         <input
