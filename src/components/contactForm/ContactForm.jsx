@@ -12,7 +12,7 @@ const ContactForm = props => {
       <input type="hidden" name="bot-field" />
       <input
         type="hidden"
-        name="learning-makeover-contact-form-sm"
+        name="form-name"
         value="learning-makeover-contact-form-sm"
       />
       <label className="contact-form__label">
