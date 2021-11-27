@@ -65,9 +65,9 @@ const ContactFormBig = props => {
         />
       </label>
 
-      <button className="button" type="submit">
+      <input className="button" type="submit">
         Submit
-      </button>
+      </input>
     </form>
   )
 }
