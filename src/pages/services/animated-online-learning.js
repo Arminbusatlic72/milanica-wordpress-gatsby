@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout/layout"
-import AnimatedOnlineLearningSection from "../components/servicesPageAnimatedOnlineLearningSection/AnimatedOnlineLearningSection"
+import Layout from "../../components/layout/layout"
+import AnimatedOnlineLearningSection from "../../components/servicesPageAnimatedOnlineLearningSection/AnimatedOnlineLearningSection"
+import PageContactFormSection from "../../components/pageContactFormSection/PageContactFormSection"
 
 const animatedOnlineLearning = ({ data }) => {
   return (
     <Layout>
       <AnimatedOnlineLearningSection animatedData={data.allWpPage.nodes[0]} />
+      <PageContactFormSection />
     </Layout>
   )
 }

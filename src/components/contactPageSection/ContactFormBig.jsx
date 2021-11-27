@@ -21,12 +21,12 @@ const ContactFormBig = props => {
           type="text"
           name="name"
           id="name"
-          placeholder=" Type Here"
+          placeholder="Type Here"
           className="contact-form__input"
         />
       </label>
       <label className="contact-form__label">
-        {props.message}
+        {props.subject}
         <textarea
           name="message"
           id="message"
@@ -40,7 +40,7 @@ const ContactFormBig = props => {
           type="email"
           name="email"
           id="email"
-          placeholder=" Type your email address"
+          placeholder="Type your email address"
           className="contact-form__input"
         />
       </label>
@@ -50,7 +50,7 @@ const ContactFormBig = props => {
           type="phone"
           name="phone"
           id="phone"
-          placeholder=" Type your tel number"
+          placeholder="Type your tel number"
           className="contact-form__input"
         />
       </label>
@@ -60,7 +60,7 @@ const ContactFormBig = props => {
           type="text"
           name="web"
           id="web"
-          placeholder=" Subject"
+          placeholder="Subject"
           className="contact-form__input"
         />
       </label>

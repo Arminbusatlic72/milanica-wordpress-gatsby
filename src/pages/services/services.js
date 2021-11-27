@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout/layout"
-import ServicesPageConsultingSection from "../components/servicesPageConsultingSection/ServicesPageConsultingSection"
-import PageContactFormSection from "../components/pageContactFormSection/PageContactFormSection"
+import Layout from "../../components/layout/layout"
+import ServicesPageConsultingSection from "../../components/servicesPageConsultingSection/ServicesPageConsultingSection"
+import PageContactFormSection from "../../components/pageContactFormSection/PageContactFormSection"
 const servicesPage = ({ data }) => {
   return (
     <>

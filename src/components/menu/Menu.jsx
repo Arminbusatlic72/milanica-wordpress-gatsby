@@ -58,6 +58,7 @@ const Menu = () => {
   )
 
   const [open, setOpen] = useState(false)
+
   return (
     <nav className="main__nav">
       <ul className={open === true ? "nav__menu menu-show" : "nav__menu"}>
