@@ -7,6 +7,7 @@ const MenuItem = ({ menuItem }) => {
         className="nav__menu-link"
         to={menuItem.path}
         activeClassName="is-active"
+        title={menuItem.label}
       >
         {menuItem.label}
       </UniversalLink>

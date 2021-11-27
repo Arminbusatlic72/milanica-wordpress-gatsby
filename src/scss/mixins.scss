@@ -22,6 +22,18 @@
   }
 }
 
+@mixin mediaMenuMin {
+  @media screen and (min-width: 990px) {
+    @content;
+  }
+}
+
+@mixin mediaMenuMax {
+  @media screen and (max-width: 989px) {
+    @content;
+  }
+}
+
 @mixin pagePaddings {
   padding: 4.5rem 0 9rem;
   @include mediaLg {

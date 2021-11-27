@@ -1,10 +1,10 @@
 @import "../../scss/variables.scss";
 @import "../../scss/mixins.scss";
+
 .main__nav {
   display: flex;
 }
 .nav__menu {
-  font-family: var(--fontFamily-secondary);
   margin-top: 0;
   margin-bottom: 0;
   background-color: $white;
@@ -21,9 +21,10 @@
   transition: visibility 0.5s, opacity 0.5s;
   @include easeOut;
   @include mediaMd {
-    left: -853px;
+    left: -980px;
   }
-  @media (min-width: 880px) {
+  @include mediaMenuMin {
+    font-family: var(--fontFamily-secondary);
     z-index: 1;
     position: relative;
     flex-direction: row;
@@ -36,9 +37,14 @@
     transition: none;
   }
 }
-.menu-show {
-  left: 0;
+@include mediaMenuMax {
+  .menu-show {
+    left: 0;
+    overflow-y: auto;
+    height: 100vh;
+  }
 }
+
 .nav__content-wrapper {
   display: flex;
 }
@@ -54,52 +60,91 @@
   transition-duration: 0.5s;
   border-bottom: 1px solid $border-color;
   margin-bottom: 0;
-  @media (min-width: 880px) {
+  @include mediaMenuMin {
     padding: 0.2rem 1rem;
     margin: 0.3rem;
     cursor: pointer;
     border-bottom: 0px;
   }
-}
-.nav__menu-item:hover {
-  background-color: $green;
-  .nav__menu-link {
-    color: $white;
+
+  &.is-parent {
+    position: relative;
+    @include mediaMenuMax {
+      > .nav__menu-link::after {
+        content: "";
+        background: no-repeat url(/btnArrow.svg);
+        width: 20px;
+        height: 20px;
+        background-size: 12px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -10px;
+      }
+      .is-opened.nav__menu-link::after {
+        transform: rotate(90deg);
+      }
+    }
   }
 }
+// .nav__menu-item:hover {
+//   background-color: $green;
+//   .nav__menu-link {
+//     color: $white;
+//   }
+// }
 .nav__menu-link {
   font-size: 3rem;
   font-weight: 700;
   text-decoration: none;
   color: $blue;
   cursor: pointer;
-  @media (min-width: 880px) {
+  position: relative;
+  @include mediaMenuMin {
     font-size: 1.8rem;
     font-weight: 300;
+    display: inline-block !important;
+    &::before {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: $green !important;
+    color: $green;
+  }
+
+  &.is-parent &:active,
+  .is-parent &:focus {
+    color: $blue;
   }
 
   &.is-active {
     color: $green !important;
+    font-weight: 700;
+    @include mediaMenuMin {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 95%;
+        background-image: url("/underline-green.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 1rem;
+        width: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
-.nav__menu-item:nth-child(2) .nav__menu-link {
-  color: $green;
-  @media (min-width: 880px) {
-    color: $blue;
-  }
-}
-.nav__menu-item:nth-child(2):hover {
-  background-color: $blue;
-  .nav__menu-link {
-    color: $green;
-  }
-}
+
 .sub-menu {
   min-width: 25rem;
   width: 100%;
@@ -107,7 +152,6 @@
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  position: absolute;
   transition: all 0.5s ease;
   margin: 0;
   left: 1rem;
@@ -119,21 +163,31 @@
   background-color: $white;
   &__item {
     width: 100%;
-    padding: 2.5rem 2rem 2.5rem 2rem;
+    padding: 1rem 2rem;
     z-index: 10;
     margin: 0;
+    .nav__menu-link {
+      font-size: 2.3rem;
+    }
 
     &:hover a {
       color: $green !important;
     }
   }
 
-  @include mediaLg {
+  @include mediaMenuMin {
     box-shadow: 5px 11px 9px -1px rgba(30, 2, 66, 0.42);
     left: 0;
     padding: 0.5rem 0 1rem;
+    position: absolute;
     &__item {
-      padding: 1rem 1rem 0.5rem;
+      // padding: 1rem 1rem 0.5rem;
+      padding: 0 1rem;
+    }
+    .nav__menu-link {
+      padding: 1rem 0 0.5rem;
+      display: inline-block;
+      font-size: 1.8rem;
     }
   }
 }

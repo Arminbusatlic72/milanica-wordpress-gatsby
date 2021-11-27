@@ -11,7 +11,7 @@
   justify-content: center;
   margin-left: 20px;
   @include easeOut;
-  @media (min-width: 880px) {
+  @include mediaMenuMin {
     display: none;
   }
 }

@@ -12,6 +12,7 @@ const Stars = props => {
         className="star-wrapper"
         src="../../images/star1.png"
         alt="star"
+        placeholder="TRACED_SVG"
       />
     )
   }

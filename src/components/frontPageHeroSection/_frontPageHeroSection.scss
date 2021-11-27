@@ -3,8 +3,11 @@
 
 .hero-section {
   overflow: auto;
-  padding-top: 3rem;
   padding-bottom: 9rem;
+
+  @include mediaLg {
+    padding-top: 3rem;
+  }
 
   &__heading-wrapper {
     @include mediaLg {
@@ -18,7 +21,7 @@
       clear: left;
       margin-left: 10rem;
 
-      @media (min-width: 880px) {
+      @media (min-width: 980px) {
         width: 32rem;
       }
     }
