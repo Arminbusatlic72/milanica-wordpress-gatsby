@@ -55,7 +55,7 @@ const ContactForm = props => {
           className="contact-form__input"
         />
       </label>
-      <input className="button" type="submit" value="Send" />
+      <input className="button" type="submit" value="Send us message" />
     </form>
   )
 }
