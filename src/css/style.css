@@ -340,14 +340,14 @@ a:focus {
   }
 }
 
-.card .ast-oembed-container {
-  position: relative;
-}
-.card .ast-oembed-container:nth-child(even):before {
+
+@media (min-width: 500px) {
+.card .iframe-container:nth-of-type(even)::before {
   content: "";
   position: absolute;
+  overflow: visible; 
   top: 30%;
-  right: -10%;
+  right: -15%;
   display: inline-block;
   background-image: url("../images/videoArrowL.png");
   background-repeat: no-repeat;
@@ -357,11 +357,12 @@ a:focus {
   z-index: 2;
   background-color: transparent;
 }
-.card .ast-oembed-container:nth-child(odd)::before {
+.card .iframe-container:nth-of-type(odd)::before {
   content: "";
   position: absolute;
+  overflow: visible; 
   top: 30%;
-  left: -10%;
+  left: -15%;
   display: inline-block;
   background-image: url("../images/videoArrowR.png");
   background-repeat: no-repeat;
@@ -370,6 +371,7 @@ a:focus {
   width: 10rem;
   z-index: 2;
   background-color: transparent;
+}
 }
 .active::before {
   content: "";

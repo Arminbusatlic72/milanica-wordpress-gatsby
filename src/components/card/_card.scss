@@ -34,13 +34,37 @@
             }
         }
     }
-    
-iframe {
+.iframe-container {
+  /* 16:9*/
+  position: relative;
+//   padding-top: 56.25%; 
     border-radius: 20px;
-    width: 100%;
-    margin-bottom: 3rem;
-    position: relative;
+  width: 39rem;
+  height: 26.5rem;
+  
+  margin-bottom: 3rem;
+    
+      }   
+.iframe-container-inner {
+    overflow: hidden; 
+    padding-top: 56.25%; 
+    border-radius: 20px;
+  width: 100%;
+  height: 100%;
+
+
 }
+.iframe-container iframe {
+    position: absolute;
+    border: 0;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top: 0;
+   border-radius: 20px;
+    
+}
+
 
 
 ul{
