@@ -18,7 +18,7 @@ const servicesPage = ({ data }) => {
 }
 export const query = graphql`
   {
-    allWpPage(filter: { uri: { eq: "/services/" } }) {
+    allWpPage(filter: { uri: { eq: "/consulting/" } }) {
       nodes {
         servicesPage {
           question {
