@@ -9,17 +9,20 @@
     padding-top: 3rem;
   }
 
+  &__wrapper {
+    max-width: 1023px;
+    margin: 0 auto;
+  }
+
   &__heading-wrapper {
     @include mediaLg {
       float: left;
-      margin-left: 10rem;
     }
   }
   &__subheading-wrapper {
     width: 28rem;
     @include mediaLg {
       clear: left;
-      margin-left: 10rem;
 
       @media (min-width: 980px) {
         width: 32rem;
@@ -39,10 +42,10 @@
     color: $blue;
     font-size: 3.6rem;
     line-height: 3.7rem;
-    font-weight: 900;
+    font-weight: 700;
     @media (min-width: 880px) {
       font-size: 4.2rem;
-      line-height: 5.6rem;
+      line-height: 6.3rem;
     }
     span {
       display: block;
@@ -51,6 +54,7 @@
 }
 
 .hero-section__heading--second {
+  font-weight: 500;
   font-style: italic;
 }
 .hero-section__heading--third {
