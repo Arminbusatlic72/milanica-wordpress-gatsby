@@ -2,8 +2,10 @@
 @import "../../scss/variables.scss";
 
 .about-founder-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 7rem 0;
+  @include mediaLg {
+    padding: 13rem 0 8rem;
+  }
 
   &__image-wrapper {
     width: 100%;
@@ -15,22 +17,33 @@
   &__paragraph {
     font-size: 1.4rem;
     line-height: 2;
-    color: #1e0242;
-    font-weight: 700;
+    color: $blue;
+    font-weight: 500;
+    margin-bottom: 0;
   }
   &__text-wrapper {
     text-align: center;
 
-    @include mediaLg {
+    @media (min-width: 880px) {
       text-align: left;
     }
   }
   &__heading {
-    font-size: 3.2rem;
-    font-weight: bold;
-    line-height: 1.7;
-    margin-top: 0;
+    font-size: 2.6rem;
+    line-height: 4.2rem;
+    font-weight: 700;
     color: $blue;
+    max-width: 400x;
+    margin: 0 auto 20px;
+
+    @include mediaLg {
+      font-size: 3.2rem;
+      max-width: 485px;
+    }
+
+    @media (min-width: 880px) {
+      margin: 0 0 15px;
+    }
   }
   &__heading-green {
     color: $green;

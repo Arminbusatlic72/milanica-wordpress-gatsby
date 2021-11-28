@@ -7,7 +7,7 @@ const FrontPageAboutFounderSection = props => {
     <section className="about-founder-section">
       <div className="global-wrapper">
         <div className="row">
-          <div className="column-40">
+          <div className="column-36">
             <div className="about-founder-section__image-wrapper">
               <GatsbyImage
                 className="img-rounded"
@@ -23,7 +23,7 @@ const FrontPageAboutFounderSection = props => {
               />
             </div>
           </div>
-          <div className="column-60">
+          <div className="column-64">
             <div className="about-founder-section__text-wrapper">
               <h2 className="about-founder-section__heading">
                 {data.frontPageAboutFounderSection.foundertitlefirstline}
