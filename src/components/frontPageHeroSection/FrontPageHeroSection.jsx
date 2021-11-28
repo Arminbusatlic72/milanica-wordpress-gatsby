@@ -8,7 +8,7 @@ const FrontPageHeroSection = props => {
   return (
     <section className="hero-section">
       <div className="global-wrapper">
-        <div class="hero-section__wrapper">
+        <div className="hero-section__wrapper">
           <div className="hero-section__heading-wrapper">
             <h1 className="hero-section__heading">
               {data.frontPageHeroSection.heading}
