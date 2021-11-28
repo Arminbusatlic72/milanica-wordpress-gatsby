@@ -67,6 +67,22 @@
   }
 }
 
+.column-30 {
+  width: 100%;
+  @media (min-width: 880px) {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+}
+.column-70 {
+  width: 100%;
+  @media (min-width: 880px) {
+    width: 70%;
+    padding-left: 1rem;
+  }
+}
+
 .page-heading {
   font-size: 3.6rem;
   font-weight: 700;

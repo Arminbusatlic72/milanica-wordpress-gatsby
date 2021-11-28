@@ -3,12 +3,18 @@
 .consulting-section {
   counter-reset: section;
   position: relative;
+  background: no-repeat url("/consulting-gradient.svg");
+  background-position: -140px 2%;
+  @include mediaLg {
+    background-position: 0 50%;
+  }
   @include pagePaddings;
   &__heading {
     color: $blue;
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 4.2rem;
+    margin: 0;
     @include mediaMd {
       font-size: 4.8rem;
       line-height: 4.2rem;
@@ -33,13 +39,16 @@
     }
   }
   &__blur-background {
-    position: absolute;
-    background: $red-background;
-    filter: $blur;
-    width: 50%;
-    height: 50%;
-    right: 0;
-    opacity: 0.3;
-    // transform: rotate(39.43deg);
+    display: none;
+    @include mediaLg {
+      display: block;
+      position: absolute;
+      width: 448px;
+      height: 998px;
+      right: 0;
+      top: -53px;
+      background: no-repeat url("/consulting-gradient-r.svg");
+      background-position: 100% 0;
+    }
   }
 }
