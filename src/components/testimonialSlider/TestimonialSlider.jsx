@@ -30,7 +30,11 @@ const TestimonialSlider = () => {
       aria-disabled={currentSlide === 0 ? true : false}
       type="button"
     >
-      <StaticImage src="../../images/sliderArrowL.png" alt="arrow" />
+      <StaticImage
+        src="../../images/sliderArrowL.png"
+        alt="arrow"
+        placeholder="TRACED_SVG"
+      />
     </button>
   )
   const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
@@ -44,7 +48,11 @@ const TestimonialSlider = () => {
       aria-disabled={currentSlide === slideCount - 1 ? true : false}
       type="button"
     >
-      <StaticImage src="../../images/sliderArrowR.png" alt="arrow" />
+      <StaticImage
+        src="../../images/sliderArrowR.png"
+        alt="arrow"
+        placeholder="TRACED_SVG"
+      />
     </button>
   )
   const settings = {
