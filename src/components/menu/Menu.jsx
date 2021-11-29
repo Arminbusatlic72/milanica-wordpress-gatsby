@@ -10,6 +10,12 @@ const Menu = () => {
       allWpMenu(filter: { name: { eq: "Primary Menu" } }) {
         edges {
           node {
+            menuButton {
+              primaryMenuButton {
+                title
+                url
+              }
+            }
             menuItems {
               nodes {
                 childItems {
@@ -77,8 +83,12 @@ const Menu = () => {
           )
         })}
       </ul>
-      <Button className={`button--sm`} link={"/"} icon={false}>
-        Start learning
+      <Button
+        className={`button--sm`}
+        link={data.allWpMenu.edges[0].node.menuButton.primaryMenuButton.url}
+        icon={false}
+      >
+        {data.allWpMenu.edges[0].node.menuButton.primaryMenuButton.title}
       </Button>
       <div
         className={open === true ? "nav__btn btn__rotate" : "nav__btn"}

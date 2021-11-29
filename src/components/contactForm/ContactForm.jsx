@@ -52,7 +52,7 @@ const ContactForm = props => {
           id="message"
           rows="1"
           placeholder="Type your message"
-          className="contact-form__input"
+          className="contact-form__input textarea"
         />
       </label>
       <input className="button" type="submit" value="Send us message" />

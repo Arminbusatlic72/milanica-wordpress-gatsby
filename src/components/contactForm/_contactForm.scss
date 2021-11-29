@@ -9,6 +9,9 @@
   }
   &__label {
     font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 3rem;
+    height: 3rem;
     color: $blue;
     margin-bottom: 4rem;
     display: inline-block;
@@ -30,20 +33,46 @@
     }
   }
 }
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: $blue;
-  opacity: 40%;
+.textarea {
+  overflow: hidden;
+  line-height: 1.5;
 }
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: $blue;
+::-webkit-input-placeholder { /* Edge */
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #1E024266;
+;
 }
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: $blue;
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #1E024266;
+;
 }
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: $blue;
+
+::placeholder {
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #1E024266;
+;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #1E024266;
+;
+}
+
+::placeholder {
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #1E024266;
+;
 }

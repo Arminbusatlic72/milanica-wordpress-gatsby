@@ -1,4 +1,5 @@
 import React from "react"
+import Arrow from "../../assets/btnArrow.svg"
 
 const ContactFormBig = props => {
   return (
@@ -60,7 +61,7 @@ const ContactFormBig = props => {
           />
         </div>
       </div>
-      <div className="text-input__half-width">
+      {/* <div className="text-input__half-width">
         <label className="contact-form__label">{props.web}</label>
         <input
           type="text"
@@ -70,9 +71,14 @@ const ContactFormBig = props => {
           className="contact-form__input"
           required
         />
-      </div>
+      </div> */}
 
-      <input className="button" type="submit" value="Submit" />
+      <button className="button arrow" type="submit">
+        <div className="button__content-wrapper">
+          Submit
+          <Arrow className="button__arrow" />
+        </div>
+      </button>
     </form>
   )
 }
