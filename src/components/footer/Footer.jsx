@@ -10,7 +10,7 @@ const Footer = () => {
         <LogoFooter />
 
         <FooterMenu />
-        <Button className={`button-green`} link={`https://www.youtube.com/`}>
+        <Button className={`button-green`} link={`/coming-soon`}>
           Start learning
         </Button>
         <div className={`main-footer__copyright`}>
