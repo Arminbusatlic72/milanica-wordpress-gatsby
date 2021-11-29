@@ -62,6 +62,8 @@
 
   &__tabs-content-wrap {
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
   }
 
   &__tabs-content {
@@ -69,10 +71,9 @@
     min-height: 25rem;
     p {
       font-size: 1.4rem;
-    line-height: 2;
-    color: $blue;
-    font-weight: 500;
-
+      line-height: 2;
+      color: $blue;
+      font-weight: 500;
     }
     @include mediaMd {
       min-height: 15rem;
