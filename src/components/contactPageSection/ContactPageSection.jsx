@@ -20,7 +20,6 @@ const ContactPageSection = () => {
           email={"Get in touch with me at"}
           message={"And I am looking for"}
           phone={"or via phone number"}
-          web={"You can check my website here"}
         />
       </div>
     </section>
