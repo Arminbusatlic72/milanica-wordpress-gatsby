@@ -67,6 +67,13 @@
   &__tabs-content {
     display: none;
     min-height: 25rem;
+    p {
+      font-size: 1.4rem;
+    line-height: 2;
+    color: $blue;
+    font-weight: 500;
+
+    }
     @include mediaMd {
       min-height: 15rem;
     }

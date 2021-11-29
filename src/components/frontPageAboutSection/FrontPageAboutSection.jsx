@@ -79,33 +79,34 @@ const FrontPageAboutSection = props => {
                     ? "about-section__tabs-content active-content"
                     : "about-section__tabs-content"
                 }
-              >
-                <p className="about-section__tabs-content-paragraph">
-                  {data.frontPageAboutSection.accordion.accordion1Text}
-                </p>
-              </div>
+                contentEditable="true"
+                dangerouslySetInnerHTML={{
+                  __html: data.frontPageAboutSection.accordion.accordion1Text,
+                }}
+              ></div>
+
               <div
                 className={
                   toggleState === 2
                     ? "about-section__tabs-content active-content"
                     : "about-section__tabs-content"
                 }
-              >
-                <p className="about-section__tabs-content-paragraph">
-                  {data.frontPageAboutSection.accordion.accordion2Text}
-                </p>
-              </div>
+                contentEditable="true"
+                dangerouslySetInnerHTML={{
+                  __html: data.frontPageAboutSection.accordion.accordion2Text,
+                }}
+              ></div>
               <div
                 className={
                   toggleState === 3
                     ? "about-section__tabs-content active-content"
                     : "about-section__tabs-content"
                 }
-              >
-                <p className="about-section__tabs-content-paragraph">
-                  {data.frontPageAboutSection.accordion.accordion3Text}
-                </p>
-              </div>
+                contentEditable="true"
+                dangerouslySetInnerHTML={{
+                  __html: data.frontPageAboutSection.accordion.accordion3Text,
+                }}
+              ></div>
             </div>
 
             <Button link={`/${data.frontPageAboutSection.button.title}`}>
