@@ -25,7 +25,7 @@ const NotFoundPage = ({ data, location }) => {
         <p>
           You can{" "}
           <a href="https://www.youtube.com/watch?v=IXurUIyoHo8">preview</a> one
-          of the lectures on our youtube channel:{" "}
+          of the lectures on our youtube channel.
         </p>
       </div>
     </Layout>
