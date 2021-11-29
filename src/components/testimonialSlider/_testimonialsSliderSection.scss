@@ -1,72 +1,71 @@
 @import "../../scss/variables.scss";
 @import "../../scss/mixins.scss";
 .testimonials-slider-section {
+  text-align: center;
+  color: $blue;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 9rem;
+  @include mediaLg {
+    padding-top: 14rem;
+    margin-bottom: 14rem;
+  }
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+  &__slide {
     text-align: center;
-    color: $blue;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    @include mediaLg {
-    padding-top: 15rem;
-    padding-bottom: 15rem;
+    min-height: 30vh;
+    padding-top: 5rem;
+    @include mediaMd {
+      padding-top: 10rem;
     }
-    &__heading {
-        font-size: 3.2rem;
-        font-weight: 700;
-    }
-    &__slide {
-        text-align: center;
-        min-height: 30vh;
-        padding-top: 5rem;
-        @include mediaMd {
-        padding-top: 10rem;
-        }
-        
-    }
-    &__slide-text-wrapper {
-        position: relative;
-    }
-    &__slide-text {
-        font-size: 1.4rem;
-        font-weight: normal;
-        line-height: 1.8;
-    }
-    &__slide-name {
-        font-weight: bold;
-        font-size: 1.8rem;
-        line-height: 1.4;
-    }
-    &__slide-position {
-        font-weight: normal;
-    }
-
+  }
+  &__slide-text-wrapper {
+    position: relative;
+  }
+  &__slide-text {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+  &__slide-name {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+  &__slide-position {
+    font-weight: normal;
+  }
 }
 .slider-wrapper {
-    max-width: 25rem;
-    width: 100%;
-    margin: 0 auto;
-    @include mediaMd {
-        max-width: 50rem;
-    }
-    @include mediaLg {
-        max-width: 70rem;
-    }
-    @include mediaXl {
-        max-width: 95rem;
-    }
+  max-width: 25rem;
+  width: 100%;
+  margin: 0 auto;
+  @include mediaMd {
+    max-width: 50rem;
+  }
+  @include mediaLg {
+    max-width: 70rem;
+  }
+  @include mediaXl {
+    max-width: 95rem;
+  }
 }
 .slick-prev {
-    left: -52px !important;
-  }
-.slick-next {
-    right: -52px!important;
+  left: -52px !important;
 }
-  
-  .slick-next:before,
-  .slick-prev:before {
-    content: "" !important;
-  }
-  .next-slick-arrow,
-  .prev-slick-arrow {
-    color: #000000;
-    font-size: 48px;
-  }
+.slick-next {
+  right: -52px !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  content: "" !important;
+}
+.next-slick-arrow,
+.prev-slick-arrow {
+  color: #000000;
+  font-size: 48px;
+}
