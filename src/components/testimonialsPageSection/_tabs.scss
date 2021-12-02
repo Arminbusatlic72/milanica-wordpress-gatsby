@@ -97,7 +97,7 @@
   }
 }
 .tab-img-rounded {
-  display: none;
+  display: none!important;
   @include mediaMd {
     display: inline-block;
   }
