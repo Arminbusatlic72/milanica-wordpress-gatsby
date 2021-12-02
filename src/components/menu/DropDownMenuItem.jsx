@@ -48,7 +48,7 @@ const DropdownMenuItem = ({ parent, children }) => {
           <li key={child.id} className="sub-menu__item">
             <UniversalLink
               className="nav__menu-link"
-              to={`${parent.url.slice(0, -1)}${child.path}`}
+              to={`/services${child.path}`}
               activeClassName="is-active"
             >
               {child.label}

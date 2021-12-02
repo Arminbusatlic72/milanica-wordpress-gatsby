@@ -15,12 +15,12 @@ const ServicesPageConsultingSection = props => {
             <h6 className="consulting-section__subheading">
               {data.servicesPage.pagesubtitle}
             </h6>
-            <ul class="whatDoIDo-section__list">
-              <li class="whatDoIDo-section__list-item">
+            <ul className="whatDoIDo-section__list">
+              <li className="whatDoIDo-section__list-item">
                 Improving the business results, adaptability, and innovation
                 potential of your organization by nurturing the learning culture
               </li>
-              <li class="whatDoIDo-section__list-item">
+              <li className="whatDoIDo-section__list-item">
                 Improving employee experience and engagement
               </li>
             </ul>
