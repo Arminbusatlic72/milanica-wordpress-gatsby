@@ -1,6 +1,6 @@
 import React from "react"
 import Icon from "../../assets/contactIcon.svg"
-import ContactForm from "../contactForm/ContactForm"
+import ContactFormBig from "./../contactPageSection/ContactFormBig"
 
 const PageContactFormSection = () => {
   return (
@@ -11,11 +11,12 @@ const PageContactFormSection = () => {
         <h2 className="contact-form-section__heading">
           Schedule an Appointment
         </h2>
-        <ContactForm
-          name="Hey, may name is"
-          email="My email is"
-          subject="and I am looking for"
-          message="This is my message"
+        <ContactFormBig
+          name={"Hey my name is"}
+          subject={"and I am looking for"}
+          email={"Get in touch with me at"}
+          message={"And I am looking for"}
+          phone={"or via phone number"}
         />
       </div>
     </section>
