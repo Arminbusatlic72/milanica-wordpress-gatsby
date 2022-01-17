@@ -10,7 +10,10 @@ const Footer = () => {
         <LogoFooter />
 
         <FooterMenu />
-        <Button className={`button-green`} link={`/coming-soon`}>
+        <Button
+          className={`button-green`}
+          link={` https://www.udemy.com/course/stress-management-animated-course/?referralCode=5998E7B9187E217AD11B `}
+        >
           Start learning
         </Button>
         <div className={`main-footer__copyright`}>

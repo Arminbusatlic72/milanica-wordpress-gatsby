@@ -7,10 +7,12 @@ import FrontPageAboutFounderSection from "../components/frontPageAboutFounderSec
 import FrontPageWhyWorkWithMeSection from "../components/frontPageWhyWorkWithMeSection/FrontPageWhyWorkWithMeSection"
 import FrontPageWhatDoIDoSection from "../components/frontPageWhatDoIDoSection/FrontPageWhatDoIDoSection"
 import TestimonialSlider from "../components/testimonialSlider/TestimonialSlider"
+import Seo from "../components/seo"
 const IndexPage = ({ data }) => {
   return (
     <>
       <Layout>
+        <Seo title="Home" />
         <FrontPageHeroSection heroData={data.allWpPage.edges[0].node} />
         <FrontPageAboutSection aboutData={data.allWpPage.edges[0].node} />
         <FrontPageAboutFounderSection

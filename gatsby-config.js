@@ -28,7 +28,7 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://backend.learningmakeover.com/graphql`,
+          `http://backend.learningmakeover.com/graphql`,
       },
     },
 
