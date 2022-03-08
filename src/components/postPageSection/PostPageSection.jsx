@@ -1,15 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const PostPageSection = props => {
-  let data = props.postData
+const PostPageSection = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allWpPost {
+        edges {
+          node {
+            title
+            slug
+            featuredImage {
+              node {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                  url
+                }
+                date
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <section className="post-page-section">
       <div className="global-wrapper">
         <div className="row">
-          {data.edges.map(edge => {
+          {data.allWpPost.edges.map(edge => {
             let imgData = edge.node.featuredImage
               ? edge.node.featuredImage.node.localFile.childImageSharp
                   .gatsbyImageData

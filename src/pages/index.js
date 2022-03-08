@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout/Layout"
 import FrontPageHeroSection from "../components/frontPageHeroSection/FrontPageHeroSection"
 import FrontPageAboutSection from "../components/frontPageAboutSection/FrontPageAboutSection"
 import FrontPageAboutFounderSection from "../components/frontPageAboutFounderSection/FrontPageAboutFounderSection"

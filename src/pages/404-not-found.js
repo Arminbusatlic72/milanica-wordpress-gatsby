@@ -10,7 +10,7 @@ const NotFoundPage = ({ data }) => {
       <Seo title={data.allWpPage.edges[0].node.title} />
       <div className="global-wrapper">
         <div className="page-404">
-          <h1>404: Not Found</h1>
+          <h2>{data.allWpPage.edges[0].node.title}</h2>
           <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
         </div>
       </div>
