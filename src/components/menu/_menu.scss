@@ -87,12 +87,12 @@
     }
   }
 }
-// .nav__menu-item:hover {
-//   background-color: $green;
-//   .nav__menu-link {
-//     color: $white;
-//   }
-// }
+.nav__menu-item:first-child {
+  order: 1;
+  @include mediaMenuMax {
+    order: 0;
+  }
+}
 .nav__menu-link {
   font-size: 3rem;
   font-weight: 700;

@@ -1,13 +1,13 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const AboutPageSection = props => {
+const AboutPageSectionSrb = props => {
   let data = props.aboutData
   const aboutPageImage = {
     src:
-      data.aboutPageSection.aboutPageImage?.localFile.childImageSharp
+      data.aboutPageSectionSrb.aboutPageImage?.localFile.childImageSharp
         .gatsbyImageData,
-    alt: data.aboutPageSection.aboutPageImage?.altText || ``,
+    alt: data.aboutPageSectionSrb.aboutPageImage?.altText || ``,
   }
   return (
     <section className="about-page-section">
@@ -24,26 +24,26 @@ const AboutPageSection = props => {
           />
         )}
         <h2 className="about-page-section__heading">
-          {data.aboutPageSection.aboutPageName}
+          {data.aboutPageSectionSrb.aboutPageNameSrb}
         </h2>
         <p className="about-page-section__position">
-          {data.aboutPageSection.aboutPagePosition}
+          {data.aboutPageSectionSrb.aboutPagePositionSrb}
         </p>
         <p className="about-page-section__paragraph">
-          {data.aboutPageSection.aboutPageText}
+          {data.aboutPageSectionSrb.aboutPageTextSrb}
         </p>
         <p className="about-page-section__paragraph">
-          {data.aboutPageSection.aboutPageText1}
+          {data.aboutPageSectionSrb.aboutPageText1Srb}
         </p>
         <p className="about-page-section__paragraph">
-          {data.aboutPageSection.aboutPageText2}
+          {data.aboutPageSectionSrb.aboutPageText2Srb}
         </p>
         <p className="about-page-section__paragraph">
-          {data.aboutPageSection.aboutPageText3}
+          {data.aboutPageSectionSrb.aboutPageText3Srb}
         </p>
       </div>
     </section>
   )
 }
 
-export default AboutPageSection
+export default AboutPageSectionSrb

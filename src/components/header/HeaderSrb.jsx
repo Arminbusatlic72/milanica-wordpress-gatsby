@@ -1,6 +1,6 @@
 import React from "react"
-import Menu from "../menu/Menu"
-import Logo from "../logo/Logo"
+import MenuSrb from "../menu/MenuSrb"
+import LogoSrb from "../logo/LogoSrb"
 
 const Header = props => {
   let data = props.langData
@@ -8,8 +8,8 @@ const Header = props => {
     <header className="global-header">
       <div className="global-wrapper">
         <div className="global-header__container">
-          <Logo />
-          <Menu langData={data} />
+          <LogoSrb />
+          <MenuSrb langData={data} />
         </div>
       </div>
     </header>

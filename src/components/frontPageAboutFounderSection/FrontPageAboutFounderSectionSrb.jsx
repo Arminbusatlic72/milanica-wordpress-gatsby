@@ -1,12 +1,12 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-const FrontPageAboutFounderSection = props => {
+const FrontPageAboutFounderSectionSrb = props => {
   let data = props.aboutFounderData
   const image = {
     src:
-      data.frontPageAboutFounderSection.founderimage?.localFile.childImageSharp
-        .gatsbyImageData,
-    alt: data.frontPageAboutFounderSection.founderimage?.altText || ``,
+      data.frontPageAboutFounderSectionSrb.founderimage?.localFile
+        .childImageSharp.gatsbyImageData,
+    alt: data.frontPageAboutFounderSectionSrb.founderimage?.altText || ``,
   }
   return (
     <section className="about-founder-section">
@@ -30,14 +30,14 @@ const FrontPageAboutFounderSection = props => {
           <div className="column-64">
             <div className="about-founder-section__text-wrapper">
               <h2 className="about-founder-section__heading">
-                {data.frontPageAboutFounderSection.foundertitlefirstline}
+                {data.frontPageAboutFounderSectionSrb.foundertitlefirstlinesrb}
                 <span className="about-founder-section__heading-green">
-                  {` ${data.frontPageAboutFounderSection.foundernameposition}`}
+                  {` ${data.frontPageAboutFounderSectionSrb.foundernamepositionsrb}`}
                 </span>
-                {` ${data.frontPageAboutFounderSection.foundertitlesecondline}`}
+                {` ${data.frontPageAboutFounderSectionSrb.foundertitlesecondlinesrb}`}
               </h2>
               <p className="about-founder-section__paragraph">
-                {data.frontPageAboutFounderSection.foundertext}
+                {data.frontPageAboutFounderSectionSrb.foundertextsrb}
               </p>
             </div>
           </div>
@@ -47,4 +47,4 @@ const FrontPageAboutFounderSection = props => {
   )
 }
 
-export default FrontPageAboutFounderSection
+export default FrontPageAboutFounderSectionSrb

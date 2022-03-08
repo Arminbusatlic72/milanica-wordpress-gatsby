@@ -20,6 +20,7 @@ const DropdownMenuItem = ({ parent, children }) => {
       setShow(true)
     }
   }
+
   return (
     <li
       className={`nav__menu-item is-parent`}
@@ -32,7 +33,7 @@ const DropdownMenuItem = ({ parent, children }) => {
         className={
           show === true ? "nav__menu-link is-opened" : "nav__menu-link"
         }
-        to={parent.label}
+        to="{parent.label}"
         partiallyActive={true}
         activeClassName="is-active"
         onClick={onClickHandlerParent}

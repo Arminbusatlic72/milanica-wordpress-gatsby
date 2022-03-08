@@ -1,17 +1,16 @@
 import React, { useState } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-
 import Button from "../button/Button"
 
-const FrontPageAboutSection = props => {
+const FrontPageAboutSectionSrb = props => {
   let data = props.aboutData
   const [toggleState, setToggleState] = useState(1)
   const toggleTab = index => setToggleState(index)
   const aboutImage = {
     src:
-      data.frontPageAboutSection.aboutimage?.localFile.childImageSharp
+      data.frontPageAboutSectionSrb.aboutimage?.localFile.childImageSharp
         .gatsbyImageData,
-    alt: data.frontPageAboutSection.aboutimage?.altText || ``,
+    alt: data.frontPageAboutSectionSrb.aboutimage?.altText || ``,
   }
 
   return (
@@ -34,7 +33,7 @@ const FrontPageAboutSection = props => {
           <div className="column-64">
             <div className="about-section__heading-wrapper">
               <h2 className="about-section__heading">
-                {data.frontPageAboutSection.title}
+                {data.frontPageAboutSectionSrb.titlesrb}
               </h2>
             </div>
             <div className="about-section__tabs-nav">
@@ -49,7 +48,7 @@ const FrontPageAboutSection = props => {
                     : "about-section__tabs-nav-item"
                 }
               >
-                {data.frontPageAboutSection.accordion.accordion1Title}
+                {data.frontPageAboutSectionSrb.accordionsrb.accordion1Titlesrb}
               </div>
               <div
                 role="button"
@@ -62,7 +61,7 @@ const FrontPageAboutSection = props => {
                     : "about-section__tabs-nav-item"
                 }
               >
-                {data.frontPageAboutSection.accordion.accordion2Title}
+                {data.frontPageAboutSectionSrb.accordionsrb.accordion2Titlesrb}
               </div>
               <div
                 role="button"
@@ -75,7 +74,7 @@ const FrontPageAboutSection = props => {
                     : "about-section__tabs-nav-item"
                 }
               >
-                {data.frontPageAboutSection.accordion.accordion3Title}
+                {data.frontPageAboutSectionSrb.accordionsrb.accordion3Titlesrb}
               </div>
             </div>
             <div className="about-section__tabs-content-wrap">
@@ -87,7 +86,9 @@ const FrontPageAboutSection = props => {
                 }
                 contentEditable="true"
                 dangerouslySetInnerHTML={{
-                  __html: data.frontPageAboutSection.accordion.accordion1Text,
+                  __html:
+                    data.frontPageAboutSectionSrb.accordionsrb
+                      .accordion1Textsrb,
                 }}
               ></div>
 
@@ -99,7 +100,9 @@ const FrontPageAboutSection = props => {
                 }
                 contentEditable="true"
                 dangerouslySetInnerHTML={{
-                  __html: data.frontPageAboutSection.accordion.accordion2Text,
+                  __html:
+                    data.frontPageAboutSectionSrb.accordionsrb
+                      .accordion2Textsrb,
                 }}
               ></div>
               <div
@@ -110,13 +113,15 @@ const FrontPageAboutSection = props => {
                 }
                 contentEditable="true"
                 dangerouslySetInnerHTML={{
-                  __html: data.frontPageAboutSection.accordion.accordion3Text,
+                  __html:
+                    data.frontPageAboutSectionSrb.accordionsrb
+                      .accordion3Textsrb,
                 }}
               ></div>
             </div>
 
-            <Button link={`${data.frontPageAboutSection.button.url}`}>
-              {data.frontPageAboutSection.button.title}
+            <Button link={`${data.frontPageAboutSectionSrb.buttonsrb.url}`}>
+              {data.frontPageAboutSectionSrb.buttonsrb.title}
             </Button>
             <div className="about-section__blur-background"></div>
           </div>
@@ -126,4 +131,4 @@ const FrontPageAboutSection = props => {
   )
 }
 
-export default FrontPageAboutSection
+export default FrontPageAboutSectionSrb

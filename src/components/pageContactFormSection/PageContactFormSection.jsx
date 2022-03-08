@@ -11,12 +11,18 @@ const PageContactFormSection = () => {
         <h2 className="contact-form-section__heading">
           Schedule an Appointment
         </h2>
+
         <ContactFormBig
           name={"Hey my name is"}
+          namePlaceholder={"Type Here"}
           subject={"and I am looking for"}
           email={"Get in touch with me at"}
+          emailPlaceholder={"Type your email address"}
           message={"And I am looking for"}
+          messagePlaceholder={"Type your question or message"}
           phone={"or via phone number"}
+          phonePlaceholder={"Type your tel number"}
+          btnText={"Submit"}
         />
       </div>
     </section>

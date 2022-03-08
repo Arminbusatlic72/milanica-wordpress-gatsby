@@ -1,7 +1,7 @@
 import React from "react"
 import Card from "../card/Card"
 
-const ServicesPageConsultingSection = props => {
+const ServicesPageConsultingSectionSrb = props => {
   let data = props.consultingData
 
   return (
@@ -10,31 +10,31 @@ const ServicesPageConsultingSection = props => {
         <div className="row">
           <div className="column-30">
             <h2 className="consulting-section__heading">
-              {data.servicesPage.pagetitle}
+              {data.servicesPageSrb.pagetitlesrb}
             </h2>
             <h6 className="consulting-section__subheading">
-              {data.servicesPage.pagesubtitle}
+              {data.servicesPageSrb.pagesubtitlesrb}
             </h6>
             <ul className="whatDoIDo-section__list">
               <li className="whatDoIDo-section__list-item">
-                {data.servicesPage.aim1}
+                {data.servicesPageSrb.aim1Srb}
               </li>
               <li className="whatDoIDo-section__list-item">
-                {data.servicesPage.aim2}
+                {data.servicesPageSrb.aim2Srb}
               </li>
             </ul>
             <h6 className="consulting-section__text">
-              {data.servicesPage.text}
+              {data.servicesPageSrb.textsrb}
             </h6>
           </div>
           <div className="column-70">
             <Card
-              question={data.servicesPage.question.question}
-              answer={data.servicesPage.question.answer}
+              question={data.servicesPageSrb.questionsrb.question}
+              answer={data.servicesPageSrb.questionsrb.answer}
             />
             <Card
-              question={data.servicesPage.question1.question}
-              answer={data.servicesPage.question1.answer}
+              question={data.servicesPageSrb.question1srb.question}
+              answer={data.servicesPageSrb.question1srb.answer}
             />
             <div className="consulting-section__blur-background"></div>
           </div>
@@ -44,4 +44,4 @@ const ServicesPageConsultingSection = props => {
   )
 }
 
-export default ServicesPageConsultingSection
+export default ServicesPageConsultingSectionSrb

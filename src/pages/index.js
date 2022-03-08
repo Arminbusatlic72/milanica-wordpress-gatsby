@@ -11,7 +11,7 @@ import Seo from "../components/seo"
 const IndexPage = ({ data }) => {
   return (
     <>
-      <Layout>
+      <Layout langData={data.allWpPage.edges[0].node.translations}>
         <Seo title="Home" />
         <FrontPageHeroSection heroData={data.allWpPage.edges[0].node} />
         <FrontPageAboutSection aboutData={data.allWpPage.edges[0].node} />
@@ -35,6 +35,13 @@ export const query = graphql`
     allWpPage(filter: { uri: { eq: "/" } }) {
       edges {
         node {
+          translations {
+            link
+            uri
+            language {
+              code
+            }
+          }
           frontPageHeroSection {
             heroImage {
               localFile {

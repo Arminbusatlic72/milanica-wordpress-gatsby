@@ -7,22 +7,22 @@ const ContactPageSection = props => {
     <section className="contact-form-page-section">
       <div className="global-wrapper">
         <h2 className="page-heading contact-form-page-section__title">
-          Contact
+          Kontaktirajte nas
         </h2>
         <Icon />
         <h6 className="contact-form-page-section__subheading">{props.title}</h6>
         <h2 className="contact-form-page-section__heading">{props.subtitle}</h2>
         <ContactFormBig
-          name={"Hey my name is"}
-          namePlaceholder={"Type Here"}
-          subject={"and I am looking for"}
-          email={"Get in touch with me at"}
-          emailPlaceholder={"Type your email address"}
-          message={"And I am looking for"}
-          messagePlaceholder={"Type your question or message"}
-          phone={"or via phone number"}
-          phonePlaceholder={"Type your tel number"}
-          btnText={"Submit"}
+          name={"Moje ime je"}
+          namePlaceholder={"napišite Vaše ime"}
+          subject={"i potrebna mi je"}
+          email={"Kontaktirajte me"}
+          emailPlaceholder={"napišite email adresu"}
+          message={"I meni je potrebna"}
+          messagePlaceholder={"napišite nam poruku"}
+          phone={"ili putem telefona"}
+          phonePlaceholder={"napišiti Vaš tel broj"}
+          btnText={"Pošalji"}
         />
       </div>
     </section>

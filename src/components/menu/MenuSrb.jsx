@@ -3,14 +3,14 @@ import { graphql, useStaticQuery } from "gatsby"
 import Button from "../button/Button"
 import LanguageSwitcher from "../languageSwitcher/LanguageSwitcher"
 import MenuItem from "./MenuItem"
-import DropdownMenuItem from "./DropDownMenuItem"
+import DropdownMenuItemSrb from "./DropDownMenuItemSrb"
 
-const Menu = props => {
+const MenuSrb = props => {
   let langSwData = props.langData
 
   const data = useStaticQuery(graphql`
     {
-      allWpMenu(filter: { name: { eq: "Primary Menu" } }) {
+      allWpMenu(filter: { name: { eq: "Primary Menu Srb" } }) {
         edges {
           node {
             menuButton {
@@ -77,7 +77,7 @@ const Menu = props => {
             ? menuItem.childItems.nodes
             : null
           return children ? (
-            <DropdownMenuItem
+            <DropdownMenuItemSrb
               key={menuItem.id}
               parent={menuItem}
               children={children}
@@ -109,4 +109,4 @@ const Menu = props => {
   )
 }
 
-export default Menu
+export default MenuSrb

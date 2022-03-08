@@ -2,14 +2,14 @@ import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Button from "../button/Button"
 
-const FrontPageHeroSection = props => {
+const FrontPageHeroSectionSrb = props => {
   let data = props.heroData
 
   const heroImage = {
     src:
-      data.frontPageHeroSection.heroImage?.localFile.childImageSharp
+      data.frontPageHeroSectionSrb.heroImage?.localFile.childImageSharp
         .gatsbyImageData,
-    alt: data.frontPageHeroSection.heroImage?.alt || ``,
+    alt: data.frontPageHeroSectionSrb.heroImage?.alt || ``,
   }
 
   return (
@@ -18,12 +18,12 @@ const FrontPageHeroSection = props => {
         <div className="hero-section__wrapper">
           <div className="hero-section__heading-wrapper">
             <h1 className="hero-section__heading">
-              {data.frontPageHeroSection.heading}
+              {data.frontPageHeroSectionSrb.headingsrb}
               <span className="hero-section__heading--second">
-                {data.frontPageHeroSection.headingSecondLine}
+                {data.frontPageHeroSectionSrb.headingSecondLineSrb}
               </span>
               <span className="hero-section__heading--third">
-                {data.frontPageHeroSection.headingThirdLine}
+                {data.frontPageHeroSectionSrb.headingThirdLineSrb}
               </span>
             </h1>
           </div>
@@ -41,19 +41,19 @@ const FrontPageHeroSection = props => {
 
             <div className="hero-section__paragraph-wrapper">
               <p className="hero-section__paragraph">
-                {data.frontPageHeroSection.text}
+                {data.frontPageHeroSectionSrb.textSrb}
               </p>
             </div>
           </div>
           <div className="hero-section__subheading-wrapper">
             <h2 className="hero-section__subheading">
-              {data.frontPageHeroSection.subheading}
+              {data.frontPageHeroSectionSrb.subheadingSrb}
             </h2>
             <Button
               className=""
-              link={data.frontPageHeroSection.herobutton.url}
+              link={data.frontPageHeroSectionSrb.herobuttonsrb.url}
             >
-              {data.frontPageHeroSection.herobutton.title}
+              {data.frontPageHeroSectionSrb.herobuttonsrb.title}
             </Button>
           </div>
         </div>
@@ -62,4 +62,4 @@ const FrontPageHeroSection = props => {
   )
 }
 
-export default FrontPageHeroSection
+export default FrontPageHeroSectionSrb
