@@ -5,7 +5,7 @@ import PostPageSection from "../components/postPageSection/PostPageSection"
 import Seo from "../components/seo"
 const postPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout langData={data.allWpPost.translations}>
       <Seo title="Post-page" />
       <PostPageSection postData={data.allWpPost}></PostPageSection>
     </Layout>
@@ -30,6 +30,13 @@ export const query = graphql`
           date
           title
           slug
+          translations {
+            link
+            uri
+            language {
+              code
+            }
+          }
         }
       }
     }

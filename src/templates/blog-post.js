@@ -12,7 +12,7 @@ import "../css/@wordpress/block-library/build-style/style.css"
 import "../css/@wordpress/block-library/build-style/theme.css"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {
@@ -102,6 +102,14 @@ export const pageQuery = graphql`
       content
       title
       slug
+      title
+      translations {
+        link
+        uri
+        language {
+          code
+        }
+      }
       date(formatString: "MMMM DD, YYYY")
       featuredImage {
         node {
