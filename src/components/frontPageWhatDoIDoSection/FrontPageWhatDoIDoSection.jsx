@@ -36,7 +36,7 @@ const FrontPageWhatDoIDoSection = props => {
             </h3>
             <Button
               className={"relative"}
-              link={`/${data.frontPageWhatDoIDoSection.whatDoIDoButton.title}`}
+              link={`${data.frontPageWhatDoIDoSection.whatDoIDoButton.url}`}
             >
               {data.frontPageWhatDoIDoSection.whatDoIDoButton.title}
             </Button>
