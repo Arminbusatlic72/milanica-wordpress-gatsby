@@ -12,15 +12,15 @@ const PostPageSection = () => {
             slug
             featuredImage {
               node {
+                altText
                 localFile {
                   childImageSharp {
                     gatsbyImageData
                   }
-                  url
                 }
-                date
               }
             }
+            id
           }
         }
       }
@@ -37,11 +37,11 @@ const PostPageSection = () => {
                   .gatsbyImageData
               : null
             let imgAlt = edge.node.featuredImage
-              ? edge.node.featuredImage.alt
+              ? edge.node.featuredImage.node.altText
               : null
 
             return (
-              <div className="column-50">
+              <div className="column-50" key={edge.node.id}>
                 <article>
                   <Link to={`/post-page/${edge.node.slug}`}>
                     {imgData !== null && (
