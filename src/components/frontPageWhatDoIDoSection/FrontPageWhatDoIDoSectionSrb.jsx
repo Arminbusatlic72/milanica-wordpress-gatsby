@@ -2,6 +2,7 @@ import React from "react"
 import Button from "../button/Button"
 const FrontPageWhatDoIDoSectionSrb = props => {
   let data = props.whatDoIDoData
+
   return (
     <section className="whatDoIDo-section">
       <div className="global-wrapper">
@@ -36,7 +37,7 @@ const FrontPageWhatDoIDoSectionSrb = props => {
             </h3>
             <Button
               className={"relative"}
-              link={`/${data.frontPageWhatDoIDoSectionSrb.whatDoIDoButtonSrb.title}`}
+              link={`${data.frontPageWhatDoIDoSectionSrb.whatDoIDoButtonSrb.url}`}
             >
               {data.frontPageWhatDoIDoSectionSrb.whatDoIDoButtonSrb.title}
             </Button>

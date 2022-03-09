@@ -2,6 +2,7 @@ import React from "react"
 import Button from "../button/Button"
 const FrontPageWhatDoIDoSection = props => {
   let data = props.whatDoIDoData
+
   return (
     <section className="whatDoIDo-section">
       <div className="global-wrapper">
