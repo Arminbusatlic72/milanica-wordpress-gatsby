@@ -87,7 +87,7 @@
     }
   }
 }
-.nav__menu-item:first-child {
+.language-switch {
   order: 1;
   @include mediaMenuMax {
     order: 0;

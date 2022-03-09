@@ -10,9 +10,8 @@ import parse from "html-react-parser"
 // @todo update this once @wordpress upgrades their postcss version
 import "../css/@wordpress/block-library/build-style/style.css"
 import "../css/@wordpress/block-library/build-style/theme.css"
-
 import Bio from "../components/bio"
-import Layout from "../components/layout/Layout"
+import LayoutPosts from "../components/layout/LayoutPosts"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {
@@ -22,7 +21,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
   }
 
   return (
-    <Layout>
+    <LayoutPosts>
       <Seo title={post.title} description={post.excerpt} />
       <div className="global-wrapper">
         <article
@@ -84,7 +83,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
           </ul>
         </nav>
       </div>
-    </Layout>
+    </LayoutPosts>
   )
 }
 

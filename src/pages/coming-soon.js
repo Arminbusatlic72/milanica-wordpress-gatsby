@@ -1,14 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
-
-import Layout from "../components/layout/Layout"
+import LayoutPosts from "../components/layout/LayoutPosts"
 import Seo from "../components/seo"
 
-const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-
+const NotFoundPage = () => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <LayoutPosts>
       <Seo title="Coming Soon" />
       <div className="global-wrapper">
         <div className="coming-soon">
@@ -30,18 +26,18 @@ const NotFoundPage = ({ data, location }) => {
           </p>
         </div>
       </div>
-    </Layout>
+    </LayoutPosts>
   )
 }
 
 export default NotFoundPage
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `

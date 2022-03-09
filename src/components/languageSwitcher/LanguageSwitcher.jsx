@@ -7,7 +7,7 @@ const LanguageSwitcher = props => {
     return null
   }
   return (
-    <div className="nav__menu-item">
+    <div className="nav__menu-item language-switch">
       <UniversalLink className="nav__menu-link" to={data[0].uri}>
         {data[0].language.code}
       </UniversalLink>

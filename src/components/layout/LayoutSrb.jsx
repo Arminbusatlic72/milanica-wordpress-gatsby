@@ -1,7 +1,7 @@
 import React from "react"
 import "../../scss/index.scss"
 import HeaderSrb from "../header/HeaderSrb"
-import Footer from "../footer/Footer"
+import FooterSrb from "../footer/FooterSrb"
 
 const Layout = props => {
   let data = props.langData
@@ -12,7 +12,7 @@ const Layout = props => {
 
       <main>{props.children}</main>
 
-      <Footer />
+      <FooterSrb />
     </>
   )
 }
