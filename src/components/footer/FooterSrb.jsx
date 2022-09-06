@@ -12,7 +12,7 @@ const Footer = () => {
         <FooterMenu />
         <Button
           className={`button-green`}
-          link={` https://www.udemy.com/course/stress-management-animated-course/?referralCode=5998E7B9187E217AD11B `}
+          link={` https://learningmakeover.thinkific.com/courses/stress-management `}
         >
           Saznajte više
         </Button>
