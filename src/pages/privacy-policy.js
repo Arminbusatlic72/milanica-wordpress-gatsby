@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 const PrivacyPolicyPage = () => {
   const listStyle = {
     padding: "0",
-    margin: "0",
+    margin: "0 0 20px",
     fontSize: "14px",
     listStylePosition: "inside",
   }

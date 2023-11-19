@@ -1,3 +1,9 @@
-.post-page-img {
-    height: 30rem;
+.post-page {
+    &-img {
+        height: 30rem;
+    }
+    &-section {
+        min-height: 100vh;
+    }
+   
 }

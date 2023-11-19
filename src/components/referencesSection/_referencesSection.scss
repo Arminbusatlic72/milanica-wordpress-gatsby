@@ -1,0 +1,37 @@
+@import "../../scss/variables.scss";
+.references-page-section {
+  padding: 4.5rem 0 9rem;
+  text-align: center;
+
+  @include mediaLg {
+    padding: 9rem 0 1rem;
+  }
+  &__heading {
+    margin-bottom: 4.5rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    @include mediaLg {
+      margin-bottom: 8.5rem;
+    }
+  }
+  &__gallery-wrapper {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin: 0 auto;
+    @include mediaLg {
+      flex-direction: row;
+      max-width: 500px;
+    }
+   
+  }
+  &__img {
+    width: 100%;
+    @include mediaLg {
+      width: 200px;
+    }
+  }
+ 
+}

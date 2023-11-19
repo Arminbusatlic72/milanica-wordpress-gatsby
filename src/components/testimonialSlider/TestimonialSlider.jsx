@@ -22,6 +22,7 @@ const TestimonialSlider = () => {
       }
     }
   `)
+
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
       {...props}

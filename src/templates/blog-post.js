@@ -34,7 +34,6 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
             <p>{post.date}</p>
 
-            {/* if we have a featured image for this post let's display it */}
             {featuredImage?.data && (
               <GatsbyImage
                 image={featuredImage.data}
