@@ -19,11 +19,18 @@
     min-height: 30vh;
     padding-top: 5rem;
     @include mediaMd {
-      padding-top: 10rem;
+      padding-top: 15rem;
     }
   }
   &__slide-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    min-height: 480px;
+    @include mediaMd {
+      min-height: 0;
+    }
   }
   &__slide-text {
     font-size: 1.4rem;
