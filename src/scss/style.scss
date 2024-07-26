@@ -323,6 +323,14 @@ a:focus {
   font-size: var(--fontSize-2);
   font-family: var(--font-heading);
 }
+@include mediaSm {
+  .blog-post {
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
 .blog-post__image-wrapper {
   margin: 2rem;
 }
