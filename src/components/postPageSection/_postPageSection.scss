@@ -1,9 +1,17 @@
 .post-page {
-    &-img {
-        height: 30rem;
+  &__section {
+    min-height: 100vh;
+  }
+  &__article {
+    border: 1px solid $border-color;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 14px;
+    box-shadow: 8px 11px 37px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 8px 11px 47px 6px rgba(0, 0, 0, 0.2);
     }
-    &-section {
-        min-height: 100vh;
-    }
-   
+  }
 }

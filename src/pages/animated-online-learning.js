@@ -6,7 +6,6 @@ import PageContactFormSection from "../components/pageContactFormSection/PageCon
 import Seo from "../components/seo"
 
 const animatedOnlineLearning = ({ data }) => {
-  console.log(data)
   return (
     <Layout langData={data.allWpPage.nodes[0].translations}>
       <Seo title={data.allWpPage.nodes[0].title} />

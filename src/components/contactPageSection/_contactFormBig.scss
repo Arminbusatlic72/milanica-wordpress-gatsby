@@ -41,11 +41,12 @@
 }
 .text-input__half-width {
   width: 100%;
+  display: flex;
+  margin-bottom: 2rem;
   @include mediaMd {
     width: 50%;
   }
-  display: flex;
-  margin-bottom: 2rem;
+
   .contact-form__label {
     max-width: 17rem;
     width: 100%;

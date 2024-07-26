@@ -24,7 +24,7 @@ const ReferenceSectionSrb = () => {
       }
     }
   `)
-  console.log(data)
+
   return (
     <section className="references-page-section">
       <div className="global-wrapper">
@@ -35,7 +35,7 @@ const ReferenceSectionSrb = () => {
           {data.allWpReference.edges.map(edge => {
             const image = edge.node.featuredImage?.node
             return (
-              <div key={image?.id}>
+              <div key={edge.node.id}>
                 <GatsbyImage
                   image={image?.localFile?.childImageSharp?.gatsbyImageData}
                   alt={image?.altText}

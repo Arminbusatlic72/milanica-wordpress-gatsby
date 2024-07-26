@@ -88,6 +88,7 @@ const Menu = props => {
         className={`button--sm`}
         link={data.allWpMenu.edges[0].node.menuButton.primaryMenuButton.url}
         icon={false}
+        aria-label={open ? "Close navigation" : "Open navigation"}
       >
         {data.allWpMenu.edges[0].node.menuButton.primaryMenuButton.title}
       </Button>
@@ -97,6 +98,7 @@ const Menu = props => {
         onKeyDown={() => setOpen(!open)}
         role="button"
         tabIndex="0"
+        aria-label={open ? "Close navigation" : "Open navigation"}
       >
         <div className="nav__line"> </div>
 

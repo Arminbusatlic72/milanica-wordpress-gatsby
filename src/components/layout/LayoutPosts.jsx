@@ -2,6 +2,7 @@ import React from "react"
 import "../../scss/index.scss"
 import HeaderPosts from "../header/HeaderPosts"
 import Footer from "../footer/Footer"
+import ConsentBanner from "../consentBanner/ConsentBanner"
 
 const LayoutPosts = props => {
   return (
@@ -11,6 +12,7 @@ const LayoutPosts = props => {
       <main>{props.children}</main>
 
       <Footer />
+      <ConsentBanner />
     </>
   )
 }

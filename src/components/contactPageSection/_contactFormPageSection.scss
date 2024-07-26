@@ -2,9 +2,10 @@
 @import "../../scss/mixins.scss";
 
 .contact-form-page-section {
-  @include pagePaddings;
   background-color: $green;
   position: relative;
+  @include pagePaddings;
+
   @include mediaLg {
     &::before {
       content: "";

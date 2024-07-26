@@ -5,10 +5,10 @@
   position: relative;
   background: no-repeat url("/consulting-gradient.svg");
   background-position: -140px 2%;
+  @include pagePaddings;
   @include mediaLg {
     background-position: 0 50%;
   }
-  @include pagePaddings;
   &__heading {
     color: $blue;
     font-weight: 700;

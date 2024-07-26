@@ -9,6 +9,7 @@ import FrontPageWhatDoIDoSectionSrb from "../../components/frontPageWhatDoIDoSec
 import ReferenceSectionSrb from "../../components/referencesSection/ReferencesSectionSrb"
 import TestimonialSliderSrb from "../../components/testimonialSlider/TestimonialSliderSrb"
 import Seo from "../../components/seo"
+import FrontPageQuizSectionSrb from "../../components/frontPageQuizSection/FrontPageQuizSectionSrb"
 const IndexPage = ({ data }) => {
   return (
     <>
@@ -25,6 +26,7 @@ const IndexPage = ({ data }) => {
         <FrontPageWhatDoIDoSectionSrb
           whatDoIDoData={data.allWpPage.edges[0].node}
         />
+        <FrontPageQuizSectionSrb quizData={data.allWpPage.edges[0].node} />
         <ReferenceSectionSrb />
         <TestimonialSliderSrb />
       </LayoutSrb>
@@ -118,6 +120,25 @@ export const query = graphql`
               url
             }
             whatDoIDoSmallSrb
+          }
+          frontPageQuizSectionSrb {
+            quizSectionButtonSrb {
+              title
+              url
+            }
+            quizSectionImageSrb {
+              altText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+            quizSectionParagraphSrb
+            quizSectionText1Srb
+            quizSectionText2Srb
+            quizSectionText3Srb
+            quizSectionTitleSrb
           }
         }
       }

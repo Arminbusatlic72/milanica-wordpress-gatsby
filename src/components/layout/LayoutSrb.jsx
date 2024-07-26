@@ -2,6 +2,7 @@ import React from "react"
 import "../../scss/index.scss"
 import HeaderSrb from "../header/HeaderSrb"
 import FooterSrb from "../footer/FooterSrb"
+import ConsentBanner from "../consentBanner/ConsentBanner"
 
 const Layout = props => {
   let data = props.langData
@@ -13,6 +14,7 @@ const Layout = props => {
       <main>{props.children}</main>
 
       <FooterSrb />
+      <ConsentBanner />
     </>
   )
 }

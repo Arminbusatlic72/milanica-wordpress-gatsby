@@ -1,0 +1,25 @@
+.cookie-consent-banner {
+  padding: 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $white;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  &__input {
+    margin-inline: 5px;
+  }
+  &__label {
+    margin-inline: 1rem;
+  }
+}
+.cookie-consent-button {
+  background-color: transparent;
+  color: $white;
+  border: 1px solid $white;
+  margin: 1rem;
+  margin-left: 0;
+}

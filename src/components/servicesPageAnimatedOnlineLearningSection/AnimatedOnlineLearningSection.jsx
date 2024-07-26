@@ -4,7 +4,7 @@ import Table from "./table/Table"
 import Button from "../button/ButtonExternal"
 const AnimatedOnlineLearningSection = props => {
   let data = props.animatedData
-  console.log(data)
+
   return (
     <section className="animated-online-learning-section">
       <div className="global-wrapper">

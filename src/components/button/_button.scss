@@ -20,6 +20,8 @@
   font-family: var(--fontFamily-secondary);
   font-size: 16px;
   font-weight: 700;
+  transition: all 0.4s ease-in-out;
+
   &__content-wrapper {
     display: flex;
     align-items: center;
@@ -45,7 +47,6 @@
       padding: 1.3rem 2.5rem;
     }
   }
-  transition: all 0.4s ease-in-out;
 }
 .button:hover {
   background-color: $green;

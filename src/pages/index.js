@@ -8,7 +8,9 @@ import FrontPageWhyWorkWithMeSection from "../components/frontPageWhyWorkWithMeS
 import FrontPageWhatDoIDoSection from "../components/frontPageWhatDoIDoSection/FrontPageWhatDoIDoSection"
 import ReferenceSection from "../components/referencesSection/ReferencesSection"
 import TestimonialSlider from "../components/testimonialSlider/TestimonialSlider"
+import FrontPageQuizSection from "../components/frontPageQuizSection/FrontPageQuizSection"
 import Seo from "../components/seo"
+
 const IndexPage = ({ data }) => {
   return (
     <>
@@ -25,6 +27,8 @@ const IndexPage = ({ data }) => {
         <FrontPageWhatDoIDoSection
           whatDoIDoData={data.allWpPage.edges[0].node}
         />
+        <FrontPageQuizSection quizData={data.allWpPage.edges[0].node} />
+
         <ReferenceSection />
         <TestimonialSlider />
       </Layout>
@@ -105,6 +109,25 @@ export const query = graphql`
             whyWorkWithMeText3
             whyWorkWithMeText2
             whyWorkWithMeText1
+          }
+          frontPageQuizSection {
+            quizSectionButton {
+              title
+              url
+            }
+            quizSectionImage {
+              altText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+            quizSectionParagraph
+            quizSectionText1
+            quizSectionText2
+            quizSectionText3
+            quizSectionTitle
           }
           frontPageWhatDoIDoSection {
             whatDoIDoSubtitle

@@ -28,7 +28,7 @@ const PostPageSection = () => {
   `)
 
   return (
-    <section className="post-page-section">
+    <section className="post-page__section">
       <div className="global-wrapper">
         <div className="row">
           {data.allWpPost.edges.map(edge => {
@@ -42,11 +42,10 @@ const PostPageSection = () => {
 
             return (
               <div className="column-50" key={edge.node.id}>
-                <article>
+                <article className="post-page__article">
                   <Link to={`/post-page/${edge.node.slug}`}>
                     {imgData !== null && (
                       <GatsbyImage
-                        className="post-page-img"
                         image={imgData}
                         quality={95}
                         layout="fullWidth"

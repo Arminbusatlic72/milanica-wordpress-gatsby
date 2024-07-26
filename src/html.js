@@ -12,6 +12,36 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+
+            if (localStorage.getItem('consentMode') === null) {
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'personalization_storage': 'denied',
+                'functionality_storage': 'denied',
+                'security_storage': 'denied',
+              });
+            } else {
+              gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+            }
+
+            if (localStorage.getItem('userId') != null) {
+              window.dataLayer.push({
+                'user_id': localStorage.getItem('userId')
+              });
+            }
+          `,
+          }}
+        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -21,20 +51,20 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-      </body>
 
-      <noscript
-        dangerouslySetInnerHTML={{
-          __html: `
-            <img
-              height="1"
-              width="1"
-              style="display:none;"
-              alt=""
-              src="https://px.ads.linkedin.com/collect/?pid=4713649&fmt=gif"
-            />`,
-        }}
-      />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+              <img
+                height="1"
+                width="1"
+                style="display:none;"
+                alt=""
+                src="https://px.ads.linkedin.com/collect/?pid=4713649&fmt=gif"
+              />`,
+          }}
+        />
+      </body>
     </html>
   )
 }

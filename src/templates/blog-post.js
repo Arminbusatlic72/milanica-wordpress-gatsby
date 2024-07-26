@@ -30,18 +30,22 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
           itemType="http://schema.org/Article"
         >
           <header>
-            <h1 itemProp="headline">{parse(post.title)}</h1>
+            <div className="blog-post__image-wrapper">
+              {featuredImage?.data && (
+                <GatsbyImage
+                  image={featuredImage.data}
+                  alt={featuredImage.alt}
+                  style={{ marginBottom: 50 }}
+                />
+              )}
+            </div>
+            <div className="blog-post__heading-wrapper">
+              <h1 itemProp="headline">{parse(post.title)}</h1>
 
-            <p>{post.date}</p>
-
-            {featuredImage?.data && (
-              <GatsbyImage
-                image={featuredImage.data}
-                alt={featuredImage.alt}
-                style={{ marginBottom: 50 }}
-              />
-            )}
+              <p>{post.date}</p>
+            </div>
           </header>
+          <hr />
 
           {!!post.content && (
             <section itemProp="articleBody">{parse(post.content)}</section>

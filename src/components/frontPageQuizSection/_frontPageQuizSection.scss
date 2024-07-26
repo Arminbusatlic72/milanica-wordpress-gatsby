@@ -1,0 +1,30 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.quiz-section {
+  padding-bottom: 9rem;
+
+  @include mediaLg {
+    padding-top: 3rem;
+  }
+  &__heading {
+    color: $blue;
+    font-size: 3.6rem;
+    line-height: 1.4;
+    font-weight: 900;
+    @include mediaMd {
+      font-size: 4.2em;
+    }
+  }
+  &__image-wrapper {
+    padding: 2rem;
+  }
+  &__list {
+    margin-left: 2rem;
+    list-style-position: outside;
+  }
+  &__list-item {
+    font-size: 1.4rem;
+    color: $blue;
+  }
+}

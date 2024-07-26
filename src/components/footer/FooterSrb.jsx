@@ -20,10 +20,16 @@ const Footer = () => {
         <div className={`main-footer__copyright`}>
           Learning Makeover | ©{new Date().getFullYear()}. <br />
           <UniversalLink
-            style={{ color: "white" }}
+            style={{ color: "white", display: "block", marginBottom: "0,5rem" }}
             to="/sr/politika-privatnosti"
           >
             Politika privatnosti
+          </UniversalLink>
+          <UniversalLink
+            style={{ color: "white", display: "block", marginBottom: "0,5rem" }}
+            to="/sr/uslovi-poslovanja"
+          >
+            Uslovi poslovanja
           </UniversalLink>
         </div>
       </div>

@@ -79,11 +79,11 @@
   background-color: $green;
   position: absolute;
   bottom: -2.4rem;
-  right: -2rem;
+  right: -1rem;
   padding: 1.5rem;
   border-radius: 0 1.8rem 0 1.8rem;
   max-width: 38.4rem;
-  width: 97%;
+  width: 100%;
 
   @include mediaLg {
     bottom: -4rem;

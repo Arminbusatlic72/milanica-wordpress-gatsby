@@ -5,6 +5,7 @@ import Button from "../button/Button"
 
 const FrontPageAboutSection = props => {
   let data = props.aboutData
+
   const [toggleState, setToggleState] = useState(1)
   const toggleTab = index => setToggleState(index)
   const aboutImage = {
