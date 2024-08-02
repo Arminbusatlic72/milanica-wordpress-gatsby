@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
@@ -19,7 +19,15 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     data: post.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
     alt: post.featuredImage?.node?.alt || ``,
   }
-
+  useEffect(() => {
+    const iframes = document.querySelectorAll(".blog-post iframe")
+    iframes.forEach(iframe => {
+      const wrapper = document.createElement("div")
+      wrapper.className = "responsive-video"
+      iframe.parentNode.insertBefore(wrapper, iframe)
+      wrapper.appendChild(iframe)
+    })
+  }, [])
   return (
     <LayoutPosts>
       <Seo title={post.title} description={post.excerpt} />
